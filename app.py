@@ -16,8 +16,8 @@ def Example():
 @app.route('/Login', methods=['POST'])
 def Show():
     data = request.json;
-    username, password = data['username'], data['Password']
-    print(username, password)
+    Username, Email, QuestionID = data['username'], data['email'], data['queid'];
+    print(Username, Email, QuestionID)
     return jsonify({"message":"success"})
 
 
