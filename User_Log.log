@@ -699,3 +699,14 @@
 2024-03-29 18:33:24,102 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:24] "POST /FacultyRegister HTTP/1.1" 200 -
 2024-03-29 18:33:32,897 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
 2024-03-29 18:33:33,300 - INFO -  * Restarting with stat
+2024-03-29 18:33:33,811 - WARNING -  * Debugger is active!
+2024-03-29 18:33:33,814 - INFO -  * Debugger PIN: 820-468-144
+2024-03-29 18:33:34,801 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:34] "OPTIONS /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:35,048 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:35] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:38,696 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:38] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:44,321 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:44] "OPTIONS /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:44,571 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:44] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:48,347 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:48] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:51,877 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:51] "OPTIONS /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:52,127 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:52] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 18:33:55,698 - INFO - 127.0.0.1 - - [29/Mar/2024 18:33:55] "POST /FacultyRegister HTTP/1.1" 200 -
