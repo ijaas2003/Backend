@@ -1,0 +1,30 @@
+2024-03-29 17:02:17,495 - WARNING -  * Debugger is active!
+2024-03-29 17:02:17,498 - INFO -  * Debugger PIN: 820-468-144
+2024-03-29 17:03:00,407 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-29 17:03:00,940 - WARNING -  * Debugger is active!
+2024-03-29 17:03:00,944 - INFO -  * Debugger PIN: 820-468-144
+2024-03-29 17:04:31,957 - INFO - 127.0.0.1 - - [29/Mar/2024 17:04:31] "OPTIONS /Login HTTP/1.1" 200 -
+2024-03-29 17:04:32,222 - INFO - 127.0.0.1 - - [29/Mar/2024 17:04:32] "POST /Login HTTP/1.1" 200 -
+2024-03-29 17:05:02,527 - INFO - 127.0.0.1 - - [29/Mar/2024 17:05:02] "OPTIONS /Login HTTP/1.1" 200 -
+2024-03-29 17:05:02,833 - INFO - 127.0.0.1 - - [29/Mar/2024 17:05:02] "POST /Login HTTP/1.1" 200 -
+2024-03-29 17:05:14,503 - INFO - 127.0.0.1 - - [29/Mar/2024 17:05:14] "OPTIONS /FacultyLogin HTTP/1.1" 200 -
+2024-03-29 17:05:14,819 - INFO - 127.0.0.1 - - [29/Mar/2024 17:05:14] "[35m[1mPOST /FacultyLogin HTTP/1.1[0m" 201 -
+2024-03-29 17:05:48,718 - INFO - 127.0.0.1 - - [29/Mar/2024 17:05:48] "OPTIONS /FacultyLogin HTTP/1.1" 200 -
+2024-03-29 17:05:49,036 - INFO - 127.0.0.1 - - [29/Mar/2024 17:05:49] "[35m[1mPOST /FacultyLogin HTTP/1.1[0m" 201 -
+2024-03-29 17:19:25,228 - INFO - 127.0.0.1 - - [29/Mar/2024 17:19:25] "GET / HTTP/1.1" 200 -
+2024-03-29 17:25:36,818 - INFO - 127.0.0.1 - - [29/Mar/2024 17:25:36] "OPTIONS /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 17:25:37,083 - INFO - 127.0.0.1 - - [29/Mar/2024 17:25:37] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 17:25:40,417 - INFO - 127.0.0.1 - - [29/Mar/2024 17:25:40] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 17:26:00,551 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-29 17:27:06,936 - WARNING -  * Debugger is active!
+2024-03-29 17:27:06,939 - INFO -  * Debugger PIN: 820-468-144
+2024-03-29 17:27:07,399 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-29 17:27:07,933 - WARNING -  * Debugger is active!
+2024-03-29 17:27:07,937 - INFO -  * Debugger PIN: 820-468-144
+2024-03-29 17:27:19,698 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-29 17:27:20,211 - WARNING -  * Debugger is active!
+2024-03-29 17:27:20,215 - INFO -  * Debugger PIN: 820-468-144
+2024-03-29 17:27:23,844 - INFO - 127.0.0.1 - - [29/Mar/2024 17:27:23] "OPTIONS /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 17:27:24,096 - INFO - 127.0.0.1 - - [29/Mar/2024 17:27:24] "POST /FacultyRegister HTTP/1.1" 200 -
+2024-03-29 17:29:35,900 - INFO - 127.0.0.1 - - [29/Mar/2024 17:29:35] "OPTIONS /FacultyLogin HTTP/1.1" 200 -
+2024-03-29 17:29:36,165 - INFO - 127.0.0.1 - - [29/Mar/2024 17:29:36] "[35m[1mPOST /FacultyLogin HTTP/1.1[0m" 201 -
