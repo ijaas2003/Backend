@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, make_response, request
 from flask_cors import CORS
 from pymongo import MongoClient;
 import re
@@ -25,8 +25,8 @@ def StudentLogin():
     else:
         return jsonify({"error":"Email Error"})
 
-@app.route('/FacultyLogin', methods=["POST"])
-def FacultyLogin():
+@app.route('/FacultyRegister', methods=["POST"])
+def FacultyReg():
     data = request.json;
     FacultyName, FacultyEmail, FacultyPass, FacultyConF_Pass = str(data['username']), str(data['email']), str(data['pass']), str(data['c_pass']);
     print(FacultyEmail, FacultyName, FacultyConF_Pass, FacultyPass)
@@ -37,7 +37,13 @@ def FacultyLogin():
             return jsonify({"error":"Password Does Not Match"})
     else:
         return jsonify({"error": "Enter valid Email or Name"})
-        
+
+
+@app.route('/FacultyLogin', methods=['POST'])
+def FacultyRegister():
+    response = make_response({"message": "Success"})
+    response.status_code = 201;
+    return response;
 
 if __name__ == '__main__':
     app.run()
