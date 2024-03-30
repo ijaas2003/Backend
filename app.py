@@ -4,9 +4,14 @@ from pymongo import MongoClient
 import logging
 import re
 import errno
+from schema.schema import faculty_schema, student_schema
+import jwt;
+# ! Schema import
+
 
 app = Flask(__name__)
 CORS(app)
+
 
 # !Initialize logging
 logging.basicConfig(filename='User_Log.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -38,7 +43,7 @@ def example():
     return "Welcome"
 
 
-@app.route('/Login', methods=['POST'])
+@app.route('/StudentLogin', methods=['POST'])
 def student_login():
     data = request.json
     username, email, question_id = str(data['username']), str(data['email']), str(data['queid'])
@@ -62,15 +67,15 @@ def faculty_register():
         if re.match(Alpha_Regex, faculty_dept):
             if re.match(Alpha_Regex, faculty_taught):
                 if faculty_pass == faculty_confirm_pass:
-                    return jsonify({"message": "success"})
+                    return jsonify({"message": "success"});
                 else:
                     return jsonify({"error": "Password Does Not Match"})
             else:
                 return jsonify({"error": "Enter Valid subject name"});
         else:
-            return jsonify({"error": "Enter valid Department"})
+            return jsonify({"error": "Enter valid Department"});
     else:
-        return jsonify({"error": "Enter valid Email or Name"})
+        return jsonify({"error": "Enter valid Email or Name"});
 
 
 @app.route('/FacultyLogin', methods=['POST'])
