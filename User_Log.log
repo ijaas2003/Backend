@@ -928,3 +928,5 @@
 2024-03-30 14:59:07,719 - INFO -  * Restarting with stat
 2024-03-30 14:59:08,184 - WARNING -  * Debugger is active!
 2024-03-30 14:59:08,187 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 16:14:23,461 - INFO - 127.0.0.1 - - [30/Mar/2024 16:14:23] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 16:14:23,711 - INFO - 127.0.0.1 - - [30/Mar/2024 16:14:23] "POST /StudentLogin HTTP/1.1" 200 -
