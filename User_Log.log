@@ -930,3 +930,767 @@
 2024-03-30 14:59:08,187 - INFO -  * Debugger PIN: 820-468-144
 2024-03-30 16:14:23,461 - INFO - 127.0.0.1 - - [30/Mar/2024 16:14:23] "OPTIONS /StudentLogin HTTP/1.1" 200 -
 2024-03-30 16:14:23,711 - INFO - 127.0.0.1 - - [30/Mar/2024 16:14:23] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:41:00,600 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:41:01,128 - INFO -  * Restarting with stat
+2024-03-30 17:41:01,946 - WARNING -  * Debugger is active!
+2024-03-30 17:41:01,949 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:41:02,448 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:41:02,991 - INFO -  * Restarting with stat
+2024-03-30 17:41:03,468 - WARNING -  * Debugger is active!
+2024-03-30 17:41:03,471 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:41:12,593 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:41:13,139 - INFO -  * Restarting with stat
+2024-03-30 17:41:13,686 - WARNING -  * Debugger is active!
+2024-03-30 17:41:13,691 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:41:16,572 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:41:16,819 - INFO -  * Restarting with stat
+2024-03-30 17:41:17,312 - WARNING -  * Debugger is active!
+2024-03-30 17:41:17,315 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:41:18,964 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:41:19,468 - INFO -  * Restarting with stat
+2024-03-30 17:41:19,968 - WARNING -  * Debugger is active!
+2024-03-30 17:41:19,972 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:41:24,182 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:41:24,600 - INFO -  * Restarting with stat
+2024-03-30 17:41:25,102 - WARNING -  * Debugger is active!
+2024-03-30 17:41:25,105 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:44:56,996 - INFO - 127.0.0.1 - - [30/Mar/2024 17:44:56] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:44:57,260 - INFO - 127.0.0.1 - - [30/Mar/2024 17:44:57] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:45:38,143 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:45:38,422 - INFO -  * Restarting with stat
+2024-03-30 17:45:38,929 - WARNING -  * Debugger is active!
+2024-03-30 17:45:38,933 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:45:46,960 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:45:47,469 - INFO -  * Restarting with stat
+2024-03-30 17:45:48,020 - WARNING -  * Debugger is active!
+2024-03-30 17:45:48,023 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:45:53,514 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:45:53,667 - INFO -  * Restarting with stat
+2024-03-30 17:45:54,340 - WARNING -  * Debugger is active!
+2024-03-30 17:45:54,343 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:46:22,422 - INFO - 127.0.0.1 - - [30/Mar/2024 17:46:22] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:46:22,687 - INFO - 127.0.0.1 - - [30/Mar/2024 17:46:22] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:46:47,255 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:46:47,482 - INFO -  * Restarting with stat
+2024-03-30 17:46:48,028 - WARNING -  * Debugger is active!
+2024-03-30 17:46:48,033 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:46:49,652 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:46:50,127 - INFO -  * Restarting with stat
+2024-03-30 17:46:50,605 - WARNING -  * Debugger is active!
+2024-03-30 17:46:50,608 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:46:52,288 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:46:52,683 - INFO -  * Restarting with stat
+2024-03-30 17:46:53,197 - WARNING -  * Debugger is active!
+2024-03-30 17:46:53,200 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:47:24,764 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:47:25,293 - INFO -  * Restarting with stat
+2024-03-30 17:47:25,758 - WARNING -  * Debugger is active!
+2024-03-30 17:47:25,761 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:47:33,718 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:47:33,947 - INFO -  * Restarting with stat
+2024-03-30 17:47:37,231 - INFO -  * Restarting with stat
+2024-03-30 17:47:49,366 - INFO -  * Restarting with stat
+2024-03-30 17:47:49,863 - WARNING -  * Debugger is active!
+2024-03-30 17:47:49,867 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:48:00,256 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:48:00,435 - INFO -  * Restarting with stat
+2024-03-30 17:48:00,912 - WARNING -  * Debugger is active!
+2024-03-30 17:48:00,915 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:48:08,825 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:48:09,123 - INFO -  * Restarting with stat
+2024-03-30 17:48:09,603 - WARNING -  * Debugger is active!
+2024-03-30 17:48:09,606 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:48:15,033 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:48:15,243 - INFO -  * Restarting with stat
+2024-03-30 17:48:19,823 - INFO -  * Restarting with stat
+2024-03-30 17:48:20,321 - WARNING -  * Debugger is active!
+2024-03-30 17:48:20,325 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:48:54,205 - INFO - 127.0.0.1 - - [30/Mar/2024 17:48:54] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:50:04,000 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:50:04,443 - INFO -  * Restarting with stat
+2024-03-30 17:50:04,930 - WARNING -  * Debugger is active!
+2024-03-30 17:50:04,935 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:50:07,891 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:50:08,039 - INFO -  * Restarting with stat
+2024-03-30 17:50:15,083 - INFO -  * Restarting with stat
+2024-03-30 17:50:20,954 - INFO -  * Restarting with stat
+2024-03-30 17:50:23,095 - INFO -  * Restarting with stat
+2024-03-30 17:50:26,347 - INFO -  * Restarting with stat
+2024-03-30 17:50:28,387 - INFO -  * Restarting with stat
+2024-03-30 17:50:36,671 - INFO -  * Restarting with stat
+2024-03-30 17:50:40,004 - INFO -  * Restarting with stat
+2024-03-30 17:50:40,477 - WARNING -  * Debugger is active!
+2024-03-30 17:50:40,480 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:50:43,424 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:50:43,611 - INFO -  * Restarting with stat
+2024-03-30 17:50:44,233 - WARNING -  * Debugger is active!
+2024-03-30 17:50:44,236 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:50:45,968 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:50:46,358 - INFO -  * Restarting with stat
+2024-03-30 17:50:46,848 - WARNING -  * Debugger is active!
+2024-03-30 17:50:46,851 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:50:49,845 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:50:50,388 - INFO -  * Restarting with stat
+2024-03-30 17:50:50,863 - WARNING -  * Debugger is active!
+2024-03-30 17:50:50,867 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:50:56,101 - INFO - 127.0.0.1 - - [30/Mar/2024 17:50:56] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:51:16,184 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:51:16,529 - INFO -  * Restarting with stat
+2024-03-30 17:51:17,053 - WARNING -  * Debugger is active!
+2024-03-30 17:51:17,056 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:51:18,261 - INFO - 127.0.0.1 - - [30/Mar/2024 17:51:18] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:53:11,514 - INFO - 127.0.0.1 - - [30/Mar/2024 17:53:11] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:53:15,507 - INFO - 127.0.0.1 - - [30/Mar/2024 17:53:15] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:53:39,412 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:53:39,832 - INFO -  * Restarting with stat
+2024-03-30 17:53:40,310 - WARNING -  * Debugger is active!
+2024-03-30 17:53:40,313 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:53:46,940 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:53:47,485 - INFO -  * Restarting with stat
+2024-03-30 17:53:47,989 - WARNING -  * Debugger is active!
+2024-03-30 17:53:47,992 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:53:49,604 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:53:50,071 - INFO -  * Restarting with stat
+2024-03-30 17:53:50,546 - WARNING -  * Debugger is active!
+2024-03-30 17:53:50,549 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:53:54,729 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:53:55,191 - INFO -  * Restarting with stat
+2024-03-30 17:53:55,691 - WARNING -  * Debugger is active!
+2024-03-30 17:53:55,694 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:53:58,591 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:53:58,775 - INFO -  * Restarting with stat
+2024-03-30 17:54:00,994 - INFO -  * Restarting with stat
+2024-03-30 17:54:01,463 - WARNING -  * Debugger is active!
+2024-03-30 17:54:01,466 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:54:05,705 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:54:06,100 - INFO -  * Restarting with stat
+2024-03-30 17:54:06,584 - WARNING -  * Debugger is active!
+2024-03-30 17:54:06,587 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:54:08,311 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:54:08,692 - INFO -  * Restarting with stat
+2024-03-30 17:54:09,193 - WARNING -  * Debugger is active!
+2024-03-30 17:54:09,196 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:54:16,020 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:54:16,368 - INFO -  * Restarting with stat
+2024-03-30 17:54:16,842 - WARNING -  * Debugger is active!
+2024-03-30 17:54:16,845 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:54:19,973 - INFO - 127.0.0.1 - - [30/Mar/2024 17:54:19] "[35m[1mPOST /StudentLogin HTTP/1.1[0m" 500 -
+2024-03-30 17:54:27,548 - INFO - 127.0.0.1 - - [30/Mar/2024 17:54:27] "[35m[1mPOST /StudentLogin HTTP/1.1[0m" 500 -
+2024-03-30 17:54:50,781 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:54:50,987 - INFO -  * Restarting with stat
+2024-03-30 17:54:51,468 - WARNING -  * Debugger is active!
+2024-03-30 17:54:51,471 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:54:56,898 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-03-30 17:54:57,116 - INFO -  * Restarting with stat
+2024-03-30 17:54:57,600 - WARNING -  * Debugger is active!
+2024-03-30 17:54:57,603 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:54:59,697 - INFO - 127.0.0.1 - - [30/Mar/2024 17:54:59] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:55:51,538 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:55:51,740 - INFO -  * Restarting with stat
+2024-03-30 17:55:52,520 - INFO -  * Restarting with stat
+2024-03-30 17:56:04,625 - INFO -  * Restarting with stat
+2024-03-30 17:56:07,837 - INFO -  * Restarting with stat
+2024-03-30 17:56:08,314 - WARNING -  * Debugger is active!
+2024-03-30 17:56:08,317 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:56:11,223 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:56:11,436 - INFO -  * Restarting with stat
+2024-03-30 17:56:11,929 - WARNING -  * Debugger is active!
+2024-03-30 17:56:11,932 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:56:18,366 - INFO - 127.0.0.1 - - [30/Mar/2024 17:56:18] "[35m[1mPOST /StudentLogin HTTP/1.1[0m" 500 -
+2024-03-30 17:56:42,151 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:56:42,558 - INFO -  * Restarting with stat
+2024-03-30 17:56:44,620 - INFO -  * Restarting with stat
+2024-03-30 17:56:45,105 - WARNING -  * Debugger is active!
+2024-03-30 17:56:45,108 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:56:46,796 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:56:47,289 - INFO -  * Restarting with stat
+2024-03-30 17:56:47,760 - WARNING -  * Debugger is active!
+2024-03-30 17:56:47,763 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:56:50,618 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-03-30 17:56:50,924 - INFO -  * Restarting with stat
+2024-03-30 17:56:51,699 - INFO -  * Restarting with stat
+2024-03-30 17:56:52,183 - WARNING -  * Debugger is active!
+2024-03-30 17:56:52,186 - INFO -  * Debugger PIN: 820-468-144
+2024-03-30 17:56:57,078 - INFO - 127.0.0.1 - - [30/Mar/2024 17:56:57] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:58:54,314 - INFO - 127.0.0.1 - - [30/Mar/2024 17:58:54] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:58:54,578 - INFO - 127.0.0.1 - - [30/Mar/2024 17:58:54] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:59:32,682 - INFO - 127.0.0.1 - - [30/Mar/2024 17:59:32] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 17:59:32,987 - INFO - 127.0.0.1 - - [30/Mar/2024 17:59:32] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 18:00:57,959 - INFO - 127.0.0.1 - - [30/Mar/2024 18:00:57] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 18:00:58,225 - INFO - 127.0.0.1 - - [30/Mar/2024 18:00:58] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 18:21:11,211 - INFO - 127.0.0.1 - - [30/Mar/2024 18:21:11] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 18:21:11,475 - INFO - 127.0.0.1 - - [30/Mar/2024 18:21:11] "POST /StudentLogin HTTP/1.1" 200 -
+2024-03-30 18:33:02,283 - INFO - 127.0.0.1 - - [30/Mar/2024 18:33:02] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-03-30 18:33:02,551 - INFO - 127.0.0.1 - - [30/Mar/2024 18:33:02] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 11:37:37,294 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-01 11:37:37,295 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-01 11:37:37,299 - INFO -  * Restarting with stat
+2024-04-01 11:37:38,520 - WARNING -  * Debugger is active!
+2024-04-01 11:37:38,526 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:39:34,727 - INFO - 127.0.0.1 - - [01/Apr/2024 11:39:34] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-04-01 11:39:34,981 - INFO - 127.0.0.1 - - [01/Apr/2024 11:39:34] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 11:47:09,187 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:47:09,689 - INFO -  * Restarting with stat
+2024-04-01 11:47:11,604 - WARNING -  * Debugger is active!
+2024-04-01 11:47:11,612 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:50:50,430 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:50:50,965 - INFO -  * Restarting with stat
+2024-04-01 11:50:52,284 - WARNING -  * Debugger is active!
+2024-04-01 11:50:52,291 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:50:55,169 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:50:55,458 - INFO -  * Restarting with stat
+2024-04-01 11:50:56,634 - WARNING -  * Debugger is active!
+2024-04-01 11:50:56,642 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:50:59,490 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:50:59,727 - INFO -  * Restarting with stat
+2024-04-01 11:51:00,893 - WARNING -  * Debugger is active!
+2024-04-01 11:51:00,900 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:51:03,575 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:51:04,047 - INFO -  * Restarting with stat
+2024-04-01 11:51:06,389 - INFO -  * Restarting with stat
+2024-04-01 11:51:08,999 - INFO -  * Restarting with stat
+2024-04-01 11:51:10,116 - WARNING -  * Debugger is active!
+2024-04-01 11:51:10,125 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:51:24,404 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:51:24,753 - INFO -  * Restarting with stat
+2024-04-01 11:51:25,884 - WARNING -  * Debugger is active!
+2024-04-01 11:51:25,892 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:51:31,936 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:51:32,463 - INFO -  * Restarting with stat
+2024-04-01 11:51:33,668 - WARNING -  * Debugger is active!
+2024-04-01 11:51:33,675 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:54:16,196 - INFO - 127.0.0.1 - - [01/Apr/2024 11:54:16] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 11:54:35,133 - INFO - 127.0.0.1 - - [01/Apr/2024 11:54:35] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 11:54:45,239 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:54:45,786 - INFO -  * Restarting with stat
+2024-04-01 11:54:47,870 - INFO -  * Restarting with stat
+2024-04-01 11:54:51,649 - INFO -  * Restarting with stat
+2024-04-01 11:54:52,744 - WARNING -  * Debugger is active!
+2024-04-01 11:54:52,752 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:54:55,509 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:54:55,871 - INFO -  * Restarting with stat
+2024-04-01 11:54:56,990 - WARNING -  * Debugger is active!
+2024-04-01 11:54:56,997 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:55:06,309 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:55:06,741 - INFO -  * Restarting with stat
+2024-04-01 11:55:10,468 - INFO -  * Restarting with stat
+2024-04-01 11:55:12,477 - INFO -  * Restarting with stat
+2024-04-01 11:55:13,604 - WARNING -  * Debugger is active!
+2024-04-01 11:55:13,613 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:55:24,651 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:55:25,236 - INFO -  * Restarting with stat
+2024-04-01 11:55:26,351 - WARNING -  * Debugger is active!
+2024-04-01 11:55:26,359 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:55:35,707 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:55:36,110 - INFO -  * Restarting with stat
+2024-04-01 11:55:37,307 - WARNING -  * Debugger is active!
+2024-04-01 11:55:37,318 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:57:12,674 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:57:13,045 - INFO -  * Restarting with stat
+2024-04-01 11:57:14,242 - WARNING -  * Debugger is active!
+2024-04-01 11:57:14,249 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:57:42,844 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:57:43,404 - INFO -  * Restarting with stat
+2024-04-01 11:57:44,559 - WARNING -  * Debugger is active!
+2024-04-01 11:57:44,567 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:57:49,010 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:57:49,254 - INFO -  * Restarting with stat
+2024-04-01 11:57:50,420 - WARNING -  * Debugger is active!
+2024-04-01 11:57:50,428 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:57:56,480 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 11:57:57,011 - INFO -  * Restarting with stat
+2024-04-01 11:58:00,863 - INFO -  * Restarting with stat
+2024-04-01 11:58:06,552 - INFO -  * Restarting with stat
+2024-04-01 11:58:07,762 - WARNING -  * Debugger is active!
+2024-04-01 11:58:07,776 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:58:21,931 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:58:22,383 - INFO -  * Restarting with stat
+2024-04-01 11:58:23,519 - WARNING -  * Debugger is active!
+2024-04-01 11:58:23,526 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 11:58:30,669 - INFO - 127.0.0.1 - - [01/Apr/2024 11:58:30] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 11:59:38,701 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 11:59:39,239 - INFO -  * Restarting with stat
+2024-04-01 11:59:40,373 - WARNING -  * Debugger is active!
+2024-04-01 11:59:40,380 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:00:27,815 - INFO - 127.0.0.1 - - [01/Apr/2024 12:00:27] "OPTIONS /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:00:28,067 - INFO - 127.0.0.1 - - [01/Apr/2024 12:00:28] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:01:23,001 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:01:23,524 - INFO -  * Restarting with stat
+2024-04-01 12:01:24,669 - WARNING -  * Debugger is active!
+2024-04-01 12:01:24,676 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:02:00,087 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:02:00,334 - INFO -  * Restarting with stat
+2024-04-01 12:02:01,589 - WARNING -  * Debugger is active!
+2024-04-01 12:02:01,602 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:02:05,961 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:02:06,228 - INFO -  * Restarting with stat
+2024-04-01 12:02:07,387 - WARNING -  * Debugger is active!
+2024-04-01 12:02:07,394 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:02:10,076 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:02:10,513 - INFO -  * Restarting with stat
+2024-04-01 12:02:11,661 - WARNING -  * Debugger is active!
+2024-04-01 12:02:11,669 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:02:12,821 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:02:13,327 - INFO -  * Restarting with stat
+2024-04-01 12:02:14,562 - WARNING -  * Debugger is active!
+2024-04-01 12:02:14,569 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:02:24,870 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:24] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:28,497 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:28] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:29,085 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:29] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:29,248 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:29] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:29,436 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:29] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:29,641 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:29] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:29,943 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:29] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:30,558 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:30] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:30,964 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:30] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:02:31,317 - INFO - 127.0.0.1 - - [01/Apr/2024 12:02:31] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:04:15,109 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:04:15,691 - INFO -  * Restarting with stat
+2024-04-01 12:04:16,955 - WARNING -  * Debugger is active!
+2024-04-01 12:04:16,969 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:04:19,949 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:04:20,087 - INFO -  * Restarting with stat
+2024-04-01 12:04:21,224 - WARNING -  * Debugger is active!
+2024-04-01 12:04:21,233 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:04:24,059 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:04:24,336 - INFO -  * Restarting with stat
+2024-04-01 12:04:25,540 - WARNING -  * Debugger is active!
+2024-04-01 12:04:25,548 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:04:28,503 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:04:28,664 - INFO -  * Restarting with stat
+2024-04-01 12:04:29,883 - WARNING -  * Debugger is active!
+2024-04-01 12:04:29,890 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:04:32,663 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:04:33,059 - INFO -  * Restarting with stat
+2024-04-01 12:04:34,189 - WARNING -  * Debugger is active!
+2024-04-01 12:04:34,196 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:04:40,288 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:04:40,384 - INFO -  * Restarting with stat
+2024-04-01 12:04:41,575 - WARNING -  * Debugger is active!
+2024-04-01 12:04:41,583 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:04:57,298 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:04:57,365 - INFO -  * Restarting with stat
+2024-04-01 12:04:58,650 - WARNING -  * Debugger is active!
+2024-04-01 12:04:58,656 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:05:22,563 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:05:22,787 - INFO -  * Restarting with stat
+2024-04-01 12:05:24,009 - WARNING -  * Debugger is active!
+2024-04-01 12:05:24,016 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:06:07,704 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:06:08,130 - INFO -  * Restarting with stat
+2024-04-01 12:06:09,394 - WARNING -  * Debugger is active!
+2024-04-01 12:06:09,402 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:09:12,687 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:09:13,196 - INFO -  * Restarting with stat
+2024-04-01 12:09:14,434 - WARNING -  * Debugger is active!
+2024-04-01 12:09:14,441 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:09:17,152 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:09:17,596 - INFO -  * Restarting with stat
+2024-04-01 12:09:21,358 - INFO -  * Restarting with stat
+2024-04-01 12:09:25,013 - INFO -  * Restarting with stat
+2024-04-01 12:09:30,464 - INFO -  * Restarting with stat
+2024-04-01 12:09:31,629 - WARNING -  * Debugger is active!
+2024-04-01 12:09:31,637 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:09:34,425 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:09:34,766 - INFO -  * Restarting with stat
+2024-04-01 12:09:36,821 - INFO -  * Restarting with stat
+2024-04-01 12:09:38,839 - INFO -  * Restarting with stat
+2024-04-01 12:09:41,047 - INFO -  * Restarting with stat
+2024-04-01 12:09:42,288 - WARNING -  * Debugger is active!
+2024-04-01 12:09:42,299 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:09:51,696 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:09:51,978 - INFO -  * Restarting with stat
+2024-04-01 12:09:55,618 - INFO -  * Restarting with stat
+2024-04-01 12:09:56,752 - WARNING -  * Debugger is active!
+2024-04-01 12:09:56,765 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:10:16,345 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\schema\\schema.py', reloading
+2024-04-01 12:10:16,904 - INFO -  * Restarting with stat
+2024-04-01 12:10:18,249 - WARNING -  * Debugger is active!
+2024-04-01 12:10:18,259 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:10:27,629 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:10:27,960 - INFO -  * Restarting with stat
+2024-04-01 12:10:29,038 - WARNING -  * Debugger is active!
+2024-04-01 12:10:29,044 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:10:33,452 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:10:33,653 - INFO -  * Restarting with stat
+2024-04-01 12:10:39,023 - INFO -  * Restarting with stat
+2024-04-01 12:10:52,405 - INFO -  * Restarting with stat
+2024-04-01 12:10:56,332 - INFO -  * Restarting with stat
+2024-04-01 12:11:06,392 - INFO -  * Restarting with stat
+2024-04-01 12:11:10,242 - INFO -  * Restarting with stat
+2024-04-01 12:11:15,557 - INFO -  * Restarting with stat
+2024-04-01 12:11:16,661 - WARNING -  * Debugger is active!
+2024-04-01 12:11:16,669 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:11:20,960 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:11:21,302 - INFO -  * Restarting with stat
+2024-04-01 12:11:22,546 - WARNING -  * Debugger is active!
+2024-04-01 12:11:22,553 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:11:24,450 - INFO - 127.0.0.1 - - [01/Apr/2024 12:11:24] "[35m[1mPOST /StudentLogin HTTP/1.1[0m" 500 -
+2024-04-01 12:12:33,676 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:12:34,176 - INFO -  * Restarting with stat
+2024-04-01 12:12:35,368 - WARNING -  * Debugger is active!
+2024-04-01 12:12:35,376 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:12:40,222 - INFO - 127.0.0.1 - - [01/Apr/2024 12:12:40] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:13:18,348 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:13:18,512 - INFO -  * Restarting with stat
+2024-04-01 12:13:25,618 - INFO -  * Restarting with stat
+2024-04-01 12:13:29,350 - INFO -  * Restarting with stat
+2024-04-01 12:13:32,985 - INFO -  * Restarting with stat
+2024-04-01 12:13:34,878 - INFO -  * Restarting with stat
+2024-04-01 12:13:55,064 - INFO -  * Restarting with stat
+2024-04-01 12:13:58,858 - INFO -  * Restarting with stat
+2024-04-01 12:14:02,651 - INFO -  * Restarting with stat
+2024-04-01 12:14:04,583 - INFO -  * Restarting with stat
+2024-04-01 12:14:05,725 - WARNING -  * Debugger is active!
+2024-04-01 12:14:05,732 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:14:08,692 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:14:08,854 - INFO -  * Restarting with stat
+2024-04-01 12:14:10,048 - WARNING -  * Debugger is active!
+2024-04-01 12:14:10,055 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:14:12,818 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:14:13,159 - INFO -  * Restarting with stat
+2024-04-01 12:14:14,296 - WARNING -  * Debugger is active!
+2024-04-01 12:14:14,305 - INFO -  * Debugger PIN: 266-570-562
+2024-04-01 12:15:02,765 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:15:03,007 - INFO -  * Restarting with stat
+2024-04-01 12:15:04,201 - WARNING -  * Debugger is active!
+2024-04-01 12:15:04,208 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:15:35,361 - INFO - 127.0.0.1 - - [01/Apr/2024 12:15:35] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:16:21,224 - INFO - 127.0.0.1 - - [01/Apr/2024 12:16:21] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:16:21,536 - INFO - 127.0.0.1 - - [01/Apr/2024 12:16:21] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:16:21,733 - INFO - 127.0.0.1 - - [01/Apr/2024 12:16:21] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:16:55,815 - INFO - 127.0.0.1 - - [01/Apr/2024 12:16:55] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:19:03,834 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:19:04,091 - INFO -  * Restarting with stat
+2024-04-01 12:19:05,308 - WARNING -  * Debugger is active!
+2024-04-01 12:19:05,315 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:19:09,823 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:19:10,370 - INFO -  * Restarting with stat
+2024-04-01 12:19:15,909 - INFO -  * Restarting with stat
+2024-04-01 12:19:17,109 - WARNING -  * Debugger is active!
+2024-04-01 12:19:17,117 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:19:19,765 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:19:20,227 - INFO -  * Restarting with stat
+2024-04-01 12:19:25,488 - INFO -  * Restarting with stat
+2024-04-01 12:19:26,733 - WARNING -  * Debugger is active!
+2024-04-01 12:19:26,742 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:19:34,529 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:19:34,964 - INFO -  * Restarting with stat
+2024-04-01 12:19:36,126 - WARNING -  * Debugger is active!
+2024-04-01 12:19:36,135 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:19:40,678 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:19:41,238 - INFO -  * Restarting with stat
+2024-04-01 12:19:42,366 - WARNING -  * Debugger is active!
+2024-04-01 12:19:42,374 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:20:23,154 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:20:23,492 - INFO -  * Restarting with stat
+2024-04-01 12:20:24,776 - WARNING -  * Debugger is active!
+2024-04-01 12:20:24,784 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:20:29,042 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:20:29,456 - INFO -  * Restarting with stat
+2024-04-01 12:20:30,562 - WARNING -  * Debugger is active!
+2024-04-01 12:20:30,570 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:21:31,114 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:21:31,690 - INFO -  * Restarting with stat
+2024-04-01 12:21:32,949 - WARNING -  * Debugger is active!
+2024-04-01 12:21:32,956 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:21:35,796 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:21:36,041 - INFO -  * Restarting with stat
+2024-04-01 12:21:39,774 - INFO -  * Restarting with stat
+2024-04-01 12:21:40,898 - WARNING -  * Debugger is active!
+2024-04-01 12:21:40,906 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:21:43,778 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:21:44,027 - INFO -  * Restarting with stat
+2024-04-01 12:21:45,171 - WARNING -  * Debugger is active!
+2024-04-01 12:21:45,180 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:21:47,981 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:21:48,259 - INFO -  * Restarting with stat
+2024-04-01 12:21:49,532 - WARNING -  * Debugger is active!
+2024-04-01 12:21:49,539 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:21:57,162 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:21:57,627 - INFO -  * Restarting with stat
+2024-04-01 12:21:58,770 - WARNING -  * Debugger is active!
+2024-04-01 12:21:58,779 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:22:08,091 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:22:08,507 - INFO -  * Restarting with stat
+2024-04-01 12:22:09,680 - WARNING -  * Debugger is active!
+2024-04-01 12:22:09,690 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:22:14,045 - INFO - 127.0.0.1 - - [01/Apr/2024 12:22:14] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:22:45,172 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:22:45,384 - INFO -  * Restarting with stat
+2024-04-01 12:22:49,088 - INFO -  * Restarting with stat
+2024-04-01 12:22:50,379 - WARNING -  * Debugger is active!
+2024-04-01 12:22:50,386 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:22:51,579 - INFO - 127.0.0.1 - - [01/Apr/2024 12:22:51] "[35m[1mPOST /StudentLogin HTTP/1.1[0m" 500 -
+2024-04-01 12:23:18,915 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:23:19,477 - INFO -  * Restarting with stat
+2024-04-01 12:23:20,648 - WARNING -  * Debugger is active!
+2024-04-01 12:23:20,655 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:23:21,256 - INFO - 127.0.0.1 - - [01/Apr/2024 12:23:21] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:23:23,027 - INFO - 127.0.0.1 - - [01/Apr/2024 12:23:23] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:25:07,227 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:25:07,793 - INFO -  * Restarting with stat
+2024-04-01 12:25:09,055 - WARNING -  * Debugger is active!
+2024-04-01 12:25:09,062 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:25:16,741 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:25:17,214 - INFO -  * Restarting with stat
+2024-04-01 12:25:18,531 - WARNING -  * Debugger is active!
+2024-04-01 12:25:18,539 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:25:24,511 - INFO - 127.0.0.1 - - [01/Apr/2024 12:25:24] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:25:36,097 - INFO - 127.0.0.1 - - [01/Apr/2024 12:25:36] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:26:00,482 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:26:00,658 - INFO -  * Restarting with stat
+2024-04-01 12:26:01,887 - WARNING -  * Debugger is active!
+2024-04-01 12:26:01,896 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:26:04,782 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:26:04,987 - INFO -  * Restarting with stat
+2024-04-01 12:26:08,535 - INFO -  * Restarting with stat
+2024-04-01 12:26:12,148 - INFO -  * Restarting with stat
+2024-04-01 12:26:15,800 - INFO -  * Restarting with stat
+2024-04-01 12:26:16,921 - WARNING -  * Debugger is active!
+2024-04-01 12:26:16,930 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:26:21,472 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:26:22,054 - INFO -  * Restarting with stat
+2024-04-01 12:26:23,246 - WARNING -  * Debugger is active!
+2024-04-01 12:26:23,252 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:26:24,495 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:26:24,812 - INFO -  * Restarting with stat
+2024-04-01 12:26:25,994 - WARNING -  * Debugger is active!
+2024-04-01 12:26:26,003 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:26:28,802 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:26:29,113 - INFO -  * Restarting with stat
+2024-04-01 12:26:30,308 - WARNING -  * Debugger is active!
+2024-04-01 12:26:30,318 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:26:34,936 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:26:35,442 - INFO -  * Restarting with stat
+2024-04-01 12:26:58,709 - INFO -  * Restarting with stat
+2024-04-01 12:26:59,926 - WARNING -  * Debugger is active!
+2024-04-01 12:26:59,935 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:27:07,768 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:27:08,138 - INFO -  * Restarting with stat
+2024-04-01 12:27:09,393 - WARNING -  * Debugger is active!
+2024-04-01 12:27:09,400 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:27:12,080 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:27:12,578 - INFO -  * Restarting with stat
+2024-04-01 12:27:13,705 - WARNING -  * Debugger is active!
+2024-04-01 12:27:13,713 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:27:16,592 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:27:16,846 - INFO -  * Restarting with stat
+2024-04-01 12:27:18,059 - WARNING -  * Debugger is active!
+2024-04-01 12:27:18,066 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:27:22,589 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:27:23,161 - INFO -  * Restarting with stat
+2024-04-01 12:27:24,292 - WARNING -  * Debugger is active!
+2024-04-01 12:27:24,300 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:27:27,125 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:27:27,432 - INFO -  * Restarting with stat
+2024-04-01 12:27:28,631 - WARNING -  * Debugger is active!
+2024-04-01 12:27:28,641 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:27:36,544 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:27:36,820 - INFO -  * Restarting with stat
+2024-04-01 12:27:37,996 - WARNING -  * Debugger is active!
+2024-04-01 12:27:38,004 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:27:41,917 - INFO - 127.0.0.1 - - [01/Apr/2024 12:27:41] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:28:09,894 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:28:10,135 - INFO -  * Restarting with stat
+2024-04-01 12:28:11,398 - WARNING -  * Debugger is active!
+2024-04-01 12:28:11,410 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:28:17,662 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:28:18,084 - INFO -  * Restarting with stat
+2024-04-01 12:28:21,714 - INFO -  * Restarting with stat
+2024-04-01 12:28:25,291 - INFO -  * Restarting with stat
+2024-04-01 12:28:26,539 - WARNING -  * Debugger is active!
+2024-04-01 12:28:26,547 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:28:34,526 - INFO - 127.0.0.1 - - [01/Apr/2024 12:28:34] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:28:56,885 - INFO - 127.0.0.1 - - [01/Apr/2024 12:28:56] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:29:05,166 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:29:05,660 - INFO -  * Restarting with stat
+2024-04-01 12:29:07,641 - INFO -  * Restarting with stat
+2024-04-01 12:29:08,768 - WARNING -  * Debugger is active!
+2024-04-01 12:29:08,776 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:32:50,480 - INFO - 127.0.0.1 - - [01/Apr/2024 12:32:50] "[35m[1mPOST /StudentLogin HTTP/1.1[0m" 500 -
+2024-04-01 12:35:59,715 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:35:59,860 - INFO -  * Restarting with stat
+2024-04-01 12:36:01,815 - INFO -  * Restarting with stat
+2024-04-01 12:36:02,982 - WARNING -  * Debugger is active!
+2024-04-01 12:36:02,992 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:36:07,513 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:36:08,105 - INFO -  * Restarting with stat
+2024-04-01 12:36:09,325 - WARNING -  * Debugger is active!
+2024-04-01 12:36:09,332 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:36:21,991 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:36:22,422 - INFO -  * Restarting with stat
+2024-04-01 12:36:29,489 - INFO -  * Restarting with stat
+2024-04-01 12:36:33,129 - INFO -  * Restarting with stat
+2024-04-01 12:36:36,921 - INFO -  * Restarting with stat
+2024-04-01 12:36:38,138 - WARNING -  * Debugger is active!
+2024-04-01 12:36:38,149 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:36:42,668 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:36:43,208 - INFO -  * Restarting with stat
+2024-04-01 12:36:44,367 - WARNING -  * Debugger is active!
+2024-04-01 12:36:44,378 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:36:47,145 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:36:47,464 - INFO -  * Restarting with stat
+2024-04-01 12:36:48,700 - WARNING -  * Debugger is active!
+2024-04-01 12:36:48,707 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:36:53,464 - INFO - 127.0.0.1 - - [01/Apr/2024 12:36:53] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:36:58,023 - INFO - 127.0.0.1 - - [01/Apr/2024 12:36:58] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:37:30,961 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:37:31,435 - INFO -  * Restarting with stat
+2024-04-01 12:37:32,712 - WARNING -  * Debugger is active!
+2024-04-01 12:37:32,723 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:38:01,922 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:38:02,454 - INFO -  * Restarting with stat
+2024-04-01 12:38:03,622 - WARNING -  * Debugger is active!
+2024-04-01 12:38:03,629 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:38:06,333 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:38:06,740 - INFO -  * Restarting with stat
+2024-04-01 12:38:07,990 - WARNING -  * Debugger is active!
+2024-04-01 12:38:07,997 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:38:17,478 - INFO - 127.0.0.1 - - [01/Apr/2024 12:38:17] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:41:37,896 - INFO - 127.0.0.1 - - [01/Apr/2024 12:41:37] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:41:54,080 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:41:54,267 - INFO -  * Restarting with stat
+2024-04-01 12:41:55,402 - WARNING -  * Debugger is active!
+2024-04-01 12:41:55,410 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:41:59,792 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:42:00,045 - INFO -  * Restarting with stat
+2024-04-01 12:42:01,919 - INFO -  * Restarting with stat
+2024-04-01 12:42:03,225 - WARNING -  * Debugger is active!
+2024-04-01 12:42:03,235 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:42:05,530 - INFO - 127.0.0.1 - - [01/Apr/2024 12:42:05] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:42:12,391 - INFO - 127.0.0.1 - - [01/Apr/2024 12:42:12] "[35m[1mPOST /StudentLogin HTTP/1.1[0m" 500 -
+2024-04-01 12:42:15,659 - INFO - 127.0.0.1 - - [01/Apr/2024 12:42:15] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:43:46,247 - INFO - 127.0.0.1 - - [01/Apr/2024 12:43:46] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:43:46,437 - INFO - 127.0.0.1 - - [01/Apr/2024 12:43:46] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:43:47,016 - INFO - 127.0.0.1 - - [01/Apr/2024 12:43:47] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:44:16,417 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:44:16,981 - INFO -  * Restarting with stat
+2024-04-01 12:44:18,220 - WARNING -  * Debugger is active!
+2024-04-01 12:44:18,227 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:44:21,011 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:44:21,417 - INFO -  * Restarting with stat
+2024-04-01 12:44:22,642 - WARNING -  * Debugger is active!
+2024-04-01 12:44:22,651 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:44:25,550 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:44:25,744 - INFO -  * Restarting with stat
+2024-04-01 12:44:26,897 - WARNING -  * Debugger is active!
+2024-04-01 12:44:26,904 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:44:32,843 - INFO - 127.0.0.1 - - [01/Apr/2024 12:44:32] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:44:37,739 - INFO - 127.0.0.1 - - [01/Apr/2024 12:44:37] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:44:39,347 - INFO - 127.0.0.1 - - [01/Apr/2024 12:44:39] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:45:37,524 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:45:38,085 - INFO -  * Restarting with stat
+2024-04-01 12:45:39,239 - WARNING -  * Debugger is active!
+2024-04-01 12:45:39,246 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:45:41,993 - INFO - 127.0.0.1 - - [01/Apr/2024 12:45:41] "[31m[1mPOST /StudentLogin HTTP/1.1[0m" 424 -
+2024-04-01 12:45:44,789 - INFO - 127.0.0.1 - - [01/Apr/2024 12:45:44] "[31m[1mPOST /StudentLogin HTTP/1.1[0m" 424 -
+2024-04-01 12:46:00,020 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:46:00,364 - INFO -  * Restarting with stat
+2024-04-01 12:46:01,567 - WARNING -  * Debugger is active!
+2024-04-01 12:46:01,574 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:46:02,181 - INFO - 127.0.0.1 - - [01/Apr/2024 12:46:02] "[31m[1mPOST /StudentLogin HTTP/1.1[0m" 414 -
+2024-04-01 12:46:33,489 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:46:33,740 - INFO -  * Restarting with stat
+2024-04-01 12:46:35,115 - WARNING -  * Debugger is active!
+2024-04-01 12:46:35,126 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:46:36,536 - INFO - 127.0.0.1 - - [01/Apr/2024 12:46:36] "[31m[1mPOST /StudentLogin HTTP/1.1[0m" 422 -
+2024-04-01 12:46:47,946 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:46:48,216 - INFO -  * Restarting with stat
+2024-04-01 12:46:54,952 - INFO -  * Restarting with stat
+2024-04-01 12:46:56,101 - WARNING -  * Debugger is active!
+2024-04-01 12:46:56,108 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:47:02,329 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:47:02,771 - INFO -  * Restarting with stat
+2024-04-01 12:47:04,002 - WARNING -  * Debugger is active!
+2024-04-01 12:47:04,010 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:47:08,450 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 12:47:08,625 - INFO -  * Restarting with stat
+2024-04-01 12:47:09,819 - WARNING -  * Debugger is active!
+2024-04-01 12:47:09,827 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 12:47:10,521 - INFO - 127.0.0.1 - - [01/Apr/2024 12:47:10] "[31m[1mPOST /StudentLogin HTTP/1.1[0m" 422 -
+2024-04-01 12:47:13,377 - INFO - 127.0.0.1 - - [01/Apr/2024 12:47:13] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 12:47:18,691 - INFO - 127.0.0.1 - - [01/Apr/2024 12:47:18] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 13:03:06,765 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:07,104 - INFO -  * Restarting with stat
+2024-04-01 13:03:09,015 - WARNING -  * Debugger is active!
+2024-04-01 13:03:09,026 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:03:11,857 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:12,128 - INFO -  * Restarting with stat
+2024-04-01 13:03:13,379 - WARNING -  * Debugger is active!
+2024-04-01 13:03:13,386 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:03:14,415 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:14,981 - INFO -  * Restarting with stat
+2024-04-01 13:03:16,126 - WARNING -  * Debugger is active!
+2024-04-01 13:03:16,133 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:03:18,924 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:19,230 - INFO -  * Restarting with stat
+2024-04-01 13:03:20,468 - WARNING -  * Debugger is active!
+2024-04-01 13:03:20,474 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:03:28,406 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:28,642 - INFO -  * Restarting with stat
+2024-04-01 13:03:29,854 - WARNING -  * Debugger is active!
+2024-04-01 13:03:29,865 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:03:39,221 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:39,594 - INFO -  * Restarting with stat
+2024-04-01 13:03:48,007 - INFO -  * Restarting with stat
+2024-04-01 13:03:49,188 - WARNING -  * Debugger is active!
+2024-04-01 13:03:49,196 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:03:53,771 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:54,365 - INFO -  * Restarting with stat
+2024-04-01 13:03:55,680 - WARNING -  * Debugger is active!
+2024-04-01 13:03:55,687 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:03:58,336 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:03:58,769 - INFO -  * Restarting with stat
+2024-04-01 13:04:00,006 - WARNING -  * Debugger is active!
+2024-04-01 13:04:00,014 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:04:15,360 - INFO - 127.0.0.1 - - [01/Apr/2024 13:04:15] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:04:25,444 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:04:25,730 - INFO -  * Restarting with stat
+2024-04-01 13:04:26,854 - WARNING -  * Debugger is active!
+2024-04-01 13:04:26,861 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:04:31,015 - INFO - 127.0.0.1 - - [01/Apr/2024 13:04:31] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:07:07,779 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:07:08,109 - INFO -  * Restarting with stat
+2024-04-01 13:07:09,327 - WARNING -  * Debugger is active!
+2024-04-01 13:07:09,338 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:07:15,399 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:07:15,965 - INFO -  * Restarting with stat
+2024-04-01 13:07:17,111 - WARNING -  * Debugger is active!
+2024-04-01 13:07:17,119 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:07:31,083 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:07:31,266 - INFO -  * Restarting with stat
+2024-04-01 13:07:32,477 - WARNING -  * Debugger is active!
+2024-04-01 13:07:32,484 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:07:35,913 - INFO - 127.0.0.1 - - [01/Apr/2024 13:07:35] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:07:43,561 - INFO - 127.0.0.1 - - [01/Apr/2024 13:07:43] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:10,969 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:10] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:11,901 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:11] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:12,045 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:12] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:12,230 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:12] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:12,407 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:12] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:12,558 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:12] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:12,725 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:12] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:12,875 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:12] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:13,046 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:13] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:13,222 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:13] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:13,356 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:13] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:13,523 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:13] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:21,482 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:21] "POST /StudentLogin HTTP/1.1" 200 -
+2024-04-01 13:08:25,829 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:25] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:32,541 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:08:33,100 - INFO -  * Restarting with stat
+2024-04-01 13:08:34,262 - WARNING -  * Debugger is active!
+2024-04-01 13:08:34,272 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:08:36,401 - INFO - 127.0.0.1 - - [01/Apr/2024 13:08:36] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 13:08:48,556 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:08:48,916 - INFO -  * Restarting with stat
+2024-04-01 13:08:50,164 - WARNING -  * Debugger is active!
+2024-04-01 13:08:50,171 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:08:51,295 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
+2024-04-01 13:08:51,748 - INFO -  * Restarting with stat
+2024-04-01 13:08:52,867 - WARNING -  * Debugger is active!
+2024-04-01 13:08:52,874 - INFO -  * Debugger PIN: 820-468-144
+2024-04-01 13:09:30,601 - INFO - 127.0.0.1 - - [01/Apr/2024 13:09:30] "POST /LoginToDash HTTP/1.1" 200 -
+2024-04-01 15:05:43,552 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\app.py', reloading
