@@ -15,3 +15,15 @@
 2024-04-04 18:30:05,013 - INFO - 127.0.0.1 - - [04/Apr/2024 18:30:05] "POST /upload HTTP/1.1" 200 -
 2024-04-04 18:31:05,179 - INFO - 127.0.0.1 - - [04/Apr/2024 18:31:05] "POST /upload HTTP/1.1" 200 -
 2024-04-04 18:32:02,215 - INFO - 127.0.0.1 - - [04/Apr/2024 18:32:02] "POST /upload HTTP/1.1" 200 -
+2024-04-04 18:47:52,256 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\src\\Test.py', reloading
+2024-04-04 18:47:52,511 - INFO -  * Restarting with stat
+2024-04-04 18:47:53,058 - WARNING -  * Debugger is active!
+2024-04-04 18:47:53,061 - INFO -  * Debugger PIN: 820-468-144
+2024-04-04 18:47:54,748 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\src\\Test.py', reloading
+2024-04-04 18:47:55,181 - INFO -  * Restarting with stat
+2024-04-04 18:47:55,715 - WARNING -  * Debugger is active!
+2024-04-04 18:47:55,718 - INFO -  * Debugger PIN: 820-468-144
+2024-04-04 18:48:03,726 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\src\\Test.py', reloading
+2024-04-04 18:48:04,274 - INFO -  * Restarting with stat
+2024-04-04 18:48:04,834 - WARNING -  * Debugger is active!
+2024-04-04 18:48:04,837 - INFO -  * Debugger PIN: 820-468-144
