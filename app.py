@@ -7,15 +7,56 @@ import datetime
 import errno
 from schema.schema import faculty_schema, student_schema
 from Authendication import GeneratedToken
+from src.Conversion import Conversion as StartGenerate;
+import os
+
+
+
+
+
+
+
+
 
 app = Flask(__name__)
 CORS(app)
 
+
+
+
+
+# ! Working Directory
+current_dir = os.getcwd();
+print(current_dir)
+
+
+
+
+
+
+
+# ! Logging
 logging.basicConfig(filename='User_Log.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+
+
+
+
+
+
+
+
+# ! Regex 
 Email_Regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 Alpha_Regex = r'^[a-zA-Z]+$'
 
+
+
+
+
+
+
+#! DB Connectivity 
 try:
     client = MongoClient('mongodb://localhost:27017', maxPoolSize=50, minPoolSize=10)
     db = client['QA_Generation']
@@ -32,9 +73,32 @@ except Exception as e:
 if 'users' not in db.list_collection_names():
     db.create_collection('users')
 
+
+
+
+
+
+
+
+
+
+
+
+
+# ! Routing 
 @app.route('/', methods=['GET'])
 def example():
     return "Welcome"
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,12 +128,27 @@ def student_login():
         return jsonify({"error": "Email Error"}), 422
 
 
+
+
+
+
 @app.route('/LoginToDash', methods=['POST'])
 def LoginToDash():
     data = request.json;
     print(data);
     
     return jsonify({ "message": "success" })
+
+
+
+
+
+
+
+
+
+
+
 
 @app.route('/FacultyRegister', methods=["POST"])
 def faculty_register():
@@ -93,11 +172,46 @@ def faculty_register():
     else:
         return jsonify({"error": "Enter valid Email or Name"})
 
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route('/FacultyLogin', methods=['POST'])
 def faculty_login():
     response = make_response({"message": "Success"})
     response.status_code = 201
     return response
+
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route('/upload', methods=["POST"])
+def upload_file():
+    uploaded_file = request.files['file']
+    File_path = os.path.join(current_dir, 'Pdf', uploaded_file.filename);
+    uploaded_file.save(File_path);
+    print(StartGenerate(uploaded_file.filename, "Data.txt"));
+    return 'File uploaded successfully';
+
+
+
 
 if __name__ == '__main__':
     app.run()
