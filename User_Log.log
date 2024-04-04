@@ -30,3 +30,25 @@
 2024-04-04 18:58:43,520 - INFO - 127.0.0.1 - - [04/Apr/2024 18:58:43] "POST /upload HTTP/1.1" 200 -
 2024-04-04 18:59:28,575 - INFO - 127.0.0.1 - - [04/Apr/2024 18:59:28] "POST /upload HTTP/1.1" 200 -
 2024-04-04 19:02:22,911 - INFO - 127.0.0.1 - - [04/Apr/2024 19:02:22] "POST /upload HTTP/1.1" 200 -
+2024-04-04 19:25:07,345 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-04 19:25:07,345 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-04 19:25:07,347 - INFO -  * Restarting with stat
+2024-04-04 19:25:07,889 - WARNING -  * Debugger is active!
+2024-04-04 19:25:07,893 - INFO -  * Debugger PIN: 820-468-144
+2024-04-04 19:25:31,056 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\Authendication.py', reloading
+2024-04-04 19:25:31,569 - INFO -  * Restarting with stat
+2024-04-04 19:25:32,278 - WARNING -  * Debugger is active!
+2024-04-04 19:25:32,284 - INFO -  * Debugger PIN: 820-468-144
+2024-04-04 19:25:54,005 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\src\\Conversion.py', reloading
+2024-04-04 19:25:54,408 - INFO -  * Restarting with stat
+2024-04-04 19:25:54,963 - WARNING -  * Debugger is active!
+2024-04-04 19:25:54,966 - INFO -  * Debugger PIN: 820-468-144
+2024-04-04 19:25:56,701 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\src\\Conversion.py', reloading
+2024-04-04 19:25:57,036 - INFO -  * Restarting with stat
+2024-04-04 19:25:57,571 - WARNING -  * Debugger is active!
+2024-04-04 19:25:57,574 - INFO -  * Debugger PIN: 820-468-144
+2024-04-04 19:26:06,738 - INFO -  * Detected change in 'C:\\My\\HTML\\demo\\Final_Year_Project\\Backend\\src\\Conversion.py', reloading
+2024-04-04 19:26:07,119 - INFO -  * Restarting with stat
+2024-04-04 19:26:07,662 - WARNING -  * Debugger is active!
+2024-04-04 19:26:07,666 - INFO -  * Debugger PIN: 820-468-144
