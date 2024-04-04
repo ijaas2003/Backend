@@ -202,6 +202,7 @@ def faculty_login():
 
 
 
+
 @app.route('/upload', methods=["POST"])
 def upload_file():
     uploaded_file = request.files['file']
@@ -209,6 +210,8 @@ def upload_file():
     uploaded_file.save(File_path);
     print(StartGenerate(uploaded_file.filename, "Data.txt"));
     return 'File uploaded successfully';
+
+
 
 
 
