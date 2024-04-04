@@ -163,3 +163,4 @@ cython_debug/
 src/Test.py
 User_Log.log
 
+Data/Data.txt
