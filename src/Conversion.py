@@ -13,4 +13,4 @@ def Conversion(file_name, save_file_name):
 			extracted_text += page.extract_text();
 	with open(desc_file_path, "w", encoding="utf-8") as text_file:
 		text_file.write(extracted_text)
-	return "Success" if extracted_text else "Not Success";
+	return extracted_text;

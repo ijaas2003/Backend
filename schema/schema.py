@@ -3,7 +3,7 @@ faculty_schema = {
    "email": str,
    "password": str,
    "department": str,
-   "courses_taught": str  # List of strings
+   "courses_taught": str
 }
 
 student_schema = {
