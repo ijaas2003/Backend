@@ -1,9 +1,9 @@
 import os;
-
+from Conversion import Conversion;
 
 
 def StartGenerates(file_name):
-    from Conversion import Conversion;
+    
     print("This is Main Function");
     Des_file_name = "Data.txt";
     Text = Conversion(file_name, Des_file_name);

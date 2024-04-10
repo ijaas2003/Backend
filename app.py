@@ -138,7 +138,7 @@ def student_login():
     data = request.json
     username, email, question_id, course = str(data['username']), str(data['email']), str(data['queid']), str(data['Course'])
     data['exp'] = datetime.datetime.now() + datetime.timedelta(days=1)
-    if re.match(Email_Regex, email):
+    if all([re.match(Email_Regex, email), re.match(Alpha_Regex, username)]) :
         print(username, email, course, question_id)
         Token = GeneratedToken(data)  # Assuming this function is defined correctly
         userData = db['users'].find_one({ "email":email, "QueId": question_id });

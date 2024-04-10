@@ -3,8 +3,8 @@ from PyPDF2 import PdfReader
 def Conversion(file_name, save_file_name):
 	current_directory = os.getcwd();
 	parent_dir = os.path.dirname(current_directory);
-	file_path = os.path.join(current_directory, 'Pdf', file_name);
-	desc_file_path = os.path.join(current_directory, 'Data', save_file_name)
+	file_path = os.path.join(current_directory,'Backend','Pdf', file_name);
+	desc_file_path = os.path.join(current_directory, 'Backend', 'Data', save_file_name)
 	print(current_directory, file_path, desc_file_path)
 	extracted_text = "";
 	with open(file_path, "rb") as pdf_file:
