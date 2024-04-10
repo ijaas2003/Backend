@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, make_response, request
+from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from pymongo import MongoClient
 import logging
@@ -8,6 +9,7 @@ import errno
 from collections import Counter
 from schema.schema import faculty_schema, student_schema
 from Authendication import GeneratedToken
+from Authendication import auth_bp;
 from src.Conversion import Conversion as StartGenerate;
 import os
 import nltk
@@ -21,6 +23,9 @@ import torch
 from heapq import nlargest
 import random
 import numpy as np;
+
+
+
 if not os.path.isdir(os.path.join(nltk.data.find('corpora'), 'stopwords')):
     nltk.download('stopwords')
 else:
@@ -110,6 +115,17 @@ if 'users' not in db.list_collection_names():
 
 
 
+# ! JWT Authendication
+
+app.config['JWT_SECRET_KEY'] = 'super-secret'  # Change this to a secure key in production
+jwt = JWTManager(app)
+
+
+app.register_blueprint(auth_bp)
+
+
+
+
 
 
 
@@ -140,7 +156,7 @@ def student_login():
     data['exp'] = datetime.datetime.now() + datetime.timedelta(days=1)
     if re.match(Email_Regex, email):
         print(username, email, course, question_id)
-        Token = GeneratedToken(data)  # Assuming this function is defined correctly
+        Token = GeneratedToken(username)  # Assuming this function is defined correctly
         userData = db['users'].find_one({ "email":email, "QueId": question_id });
         if userData == None:
             datas = {
@@ -196,7 +212,21 @@ def faculty_register():
         if re.match(Alpha_Regex, faculty_dept):
             if re.match(Alpha_Regex, faculty_taught):
                 if faculty_pass == faculty_confirm_pass:
-                    return jsonify({"message": "success"})
+                    userData = db['faculty'].find_one({"faculty_email":faculty_email});
+                    if userData == None:
+                        datas = {
+                            "faculty_name": faculty_name,
+                            "faculty_email": faculty_email,
+                            "faculty_dept": faculty_dept,
+                            "faculty_taught": faculty_taught,
+                            "faculty_pass": faculty_pass,
+                            "faculty_confirm_pass": faculty_confirm_pass
+                        }
+                        res = db['faculty'].insert_one(datas);
+                        if res.acknowledged:
+                            return jsonify({"message": "success"})
+                    else: 
+                        return jsonify({"error": "User Already Exist"})
                 else:
                     return jsonify({"error": "Password Does Not Match"})
             else:
@@ -228,7 +258,13 @@ def faculty_login():
 
 
 
-
+@app.route('/GetUserData/<Type>/<id>')
+def GetData(Type,id):
+    print(Type, id)
+    if Type == "faculty":
+        return jsonify({"Success": "fac Success"})
+    else:
+        return jsonify({"Success": "user Success"})
 
 
 

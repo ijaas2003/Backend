@@ -1,9 +1,10 @@
 faculty_schema = {
-   "name": str,
-   "email": str,
-   "password": str,
-   "department": str,
-   "courses_taught": str
+   "faculty_name": str,
+   "faculty_email": str,
+   "faculty_dept": str,
+   "faculty_taught": str,
+   "faculty_pass": str,
+   "faculty_confirm_pass": str
 }
 
 student_schema = {
@@ -11,4 +12,10 @@ student_schema = {
    "email": str,
    "course": str,
    "QueId": str
+}
+
+Questions = {
+   "Question": str,
+   "Answer": str,
+   "Distractors": [str]
 }

@@ -1,8 +1,13 @@
-import jwt
+from flask import Blueprint, jsonify, request
+from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
 
+auth_bp = Blueprint('Authendication', __name__)
 secrete_Key = "QA_Generation";
 
-def GeneratedToken(data):
-     print(data);
-     Token = jwt.encode(data, secrete_Key, algorithm="HS256");
+def GeneratedToken(username):
+     print(username);
+     Token = create_access_token(identity=username);
      return Token;
+
+
+
