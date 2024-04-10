@@ -19,6 +19,7 @@ from nltk.corpus import stopwords
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 import torch
 from heapq import nlargest
+from flask import flash
 import random
 import numpy as np;
 if not os.path.isdir(os.path.join(nltk.data.find('corpora'), 'stopwords')):
@@ -105,7 +106,8 @@ except Exception as e:
 if 'users' not in db.list_collection_names():
     db.create_collection('users')
 
-
+if 'faculty' not in db.list_collection_names():
+    db.create_collection('faculty')
 
 
 
@@ -137,7 +139,10 @@ def example():
 def student_login():
     data = request.json
     username, email, question_id, course = str(data['username']), str(data['email']), str(data['queid']), str(data['Course'])
-    data['exp'] = datetime.datetime.now() + datetime.timedelta(days=1)
+    data['exp'] = datetime.datetime.now() + datetime.timedelta(days=1)  
+    if any([username ==" ",email =="",question_id=="",course==""]) :
+        # print("Please Enter All fields")
+        return jsonify({"Error":"Please Enter all fields"})
     if all([re.match(Email_Regex, email), re.match(Alpha_Regex, username)]) :
         print(username, email, course, question_id)
         Token = GeneratedToken(data)  # Assuming this function is defined correctly
@@ -178,11 +183,7 @@ def LoginToDash():
 
 
 
-
-
-
-
-
+from flask import redirect, url_for
 
 @app.route('/FacultyRegister', methods=["POST"])
 def faculty_register():
@@ -196,7 +197,24 @@ def faculty_register():
         if re.match(Alpha_Regex, faculty_dept):
             if re.match(Alpha_Regex, faculty_taught):
                 if faculty_pass == faculty_confirm_pass:
-                    return jsonify({"message": "success"})
+                    userdata = db['faculty'].find_one({"faculty_email":faculty_email})
+                    if userdata is not None:
+                        return jsonify({"error": "User already exists"})
+                    
+                    datas = {
+                        "faculty_name":faculty_name,
+                        "faculty_email":faculty_email,
+                        "faculty_pass":faculty_pass,
+                        "faculty_dept":faculty_dept,
+                        "faculty_teach":faculty_taught,
+                    }
+                    res = db['faculty'].insert_one(datas)
+                    if res.acknowledged:
+                        datas["_id"] = str(datas['_id'])
+                        response = make_response({"message": "Success"})
+                        response.status_code = 201
+                        return response
+                        
                 else:
                     return jsonify({"error": "Password Does Not Match"})
             else:
@@ -208,32 +226,30 @@ def faculty_register():
 
 
 
-
-
-
-
-
-
-
-
 @app.route('/FacultyLogin', methods=['POST'])
 def faculty_login():
-    response = make_response({"message": "Success"})
-    response.status_code = 201
-    return response
-
-
-
-
-
-
-
-
-
-
-
-
-
+    data = request.json
+    faculty_email, faculty_pass = str(data['email']), str(data['pass'])
+    if any([faculty_email == "", faculty_pass == ""]):
+        return jsonify({"error": "Enter all fields"})
+    if re.match(Email_Regex, faculty_email):
+        userdata = db['faculty'].find_one({"faculty_email": faculty_email})  
+        # print(userdata)
+        if userdata is not None:
+            stored_pass = userdata.get('faculty_pass') 
+            print(stored_pass)
+            if stored_pass == faculty_pass:
+                print("success")
+                response = make_response({"message": "Success"})
+                response.status_code = 201
+                return response
+            else:
+                return jsonify({"error": "Incorrect password"})
+        else:
+            response=make_response({"error":"User Not Found "})
+            return response
+    else:
+        return jsonify({"error": "Invalid email format"})
 
 
 
@@ -248,6 +264,7 @@ def upload_file():
     File_path = os.path.join(current_dir, 'Pdf', uploaded_file.filename);
     uploaded_file.save(File_path);
     text = StartGenerate(uploaded_file.filename, "Data.txt");
+    # print(text)
     if text:
         process = Start(text=text);
         print(process)
