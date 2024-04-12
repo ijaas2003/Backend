@@ -248,7 +248,7 @@ def faculty_register():
 
 @app.route('/FacultyLogin', methods=['POST'])
 def faculty_login():
-    response = make_response({"message": "Success"})
+    response = make_response({"message": "ok"})
     response.status_code = 201
     return response
 
