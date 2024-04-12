@@ -248,10 +248,29 @@ def faculty_register():
 
 @app.route('/FacultyLogin', methods=['POST'])
 def faculty_login():
-    response = make_response({"message": "ok"})
-    response.status_code = 201
-    return response
-
+    data = request.json
+    faculty_email, faculty_pass = str(data['email']), str(data['pass'])
+    
+    if any([faculty_email == "", faculty_pass == ""]):
+        return jsonify({"error": "Enter all fields"})
+    
+    if re.match(Email_Regex, faculty_email):
+        userdata = db['faculty'].find_one({"faculty_email": faculty_email})  # Correct field name here
+        print(userdata)
+        if userdata is not None:
+            stored_pass = userdata.get('faculty_pass')  # Correct field name here
+            print(stored_pass)
+            if stored_pass == faculty_pass:
+                print("success")
+                response = make_response({"message": "Success"})
+                response.status_code = 201
+                return response
+            else:
+                return jsonify({"error": "Incorrect password"})
+        else:
+            return jsonify({"error": "User not found"})
+    else:
+        return jsonify({"error": "Invalid email format"})
 
 
 
