@@ -3,8 +3,12 @@ from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from pymongo import MongoClient
 import logging
+import string
+# import json
+# import ast
 import re
 import datetime
+import textstat
 import errno
 from collections import Counter
 from schema.schema import faculty_schema, student_schema
@@ -23,6 +27,22 @@ import torch
 from heapq import nlargest
 import random
 import numpy as np;
+
+import gensim.downloader as api
+
+# Explicitly load the cached model, if available
+model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+
+if model_path:
+    # Model is cached, load it
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model loaded from cache")
+else:
+    # Model is not cached, download it
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model downloaded")
+
+# Now you can use the glove_model for further processing
 
 
 
@@ -277,6 +297,8 @@ def faculty_login():
 
 
 
+
+
 @app.route('/GetUserData/<Type>/<id>')
 def GetData(Type,id):
     print(Type, id)
@@ -295,8 +317,6 @@ def GetData(Type,id):
 
 
 
-
-
 @app.route('/upload', methods=["POST"])
 def upload_file():
     uploaded_file = request.files['file']
@@ -304,6 +324,12 @@ def upload_file():
     uploaded_file.save(File_path);
     text = StartGenerate(uploaded_file.filename, "Data.txt");
     if text:
+        def GenerateId(lens):
+            total = string.ascii_letters + string.digits + string.punctuation;
+            Id = ''.join(random.choice(total) for _ in range(lens))
+            return Id
+        global QuestionId;
+        QuestionId = GenerateId(lens=10);
         process = Start(text=text);
         print(process)
         return jsonify({"message": "success"})
@@ -455,13 +481,91 @@ def Start(text):
         return que_pair
 
     questions = generate_questions(summaries, common_keywords, question_model, question_tokenizer)
-    for question, answer in questions:
-        print("Question:", question)
-        print("Answer:", answer)
-        print("\n")
-    return "yes"
+    
+    def remove_words(input_string, words_to_remove):
+        Removed_n = input_string.replace("\n", "");
+        words = input_string.split()
+        cleaned_words = [word for word in words if word.lower() not in words_to_remove]
+        return ' '.join(cleaned_words)
 
 
+    def generate_distractors(target_word, num_distractors=5, glove_model=None):
+        target_words = target_word.split()
+
+        try:
+            target_vectors = [glove_model.get_vector(word) for word in target_words]
+            target_vector = np.mean(target_vectors, axis=0)
+            # Calculate cosine similarity between the target word and all other words in the vocabulary
+            similarity_scores = np.dot(glove_model.vectors, target_vector) / (
+                np.linalg.norm(glove_model.vectors, axis=1) * np.linalg.norm(target_vector)
+            )
+            # Sort the words based on their similarity scores
+            most_similar_indices = np.argsort(-similarity_scores)
+            # Extract top similar words as distractors (excluding the target word itself)
+            distractors = [glove_model.index_to_key[idx] for idx in most_similar_indices if glove_model.index_to_key[idx] not in target_words]
+            return distractors[:num_distractors]  # Return the specified number of distractors
+
+
+        except Exception as e:
+            print("Error occurred:", e)
+            return []
+
+
+    current_Answer_list = []
+    Proper_QA = [];
+    RemoveWords = ["its", "a", "the", "this", "page n01", "n01"];
+    i = 1;
+    for index, (question, answer) in enumerate(questions, start = 1):
+        similarity = []
+        difficulty = []
+        que_diff = ""
+        ans = remove_words(answer, RemoveWords);
+        target_word = ans.lower()
+        ansnlp = nlp(target_word);
+        distractors = generate_distractors(target_word, glove_model=glove_model)
+        if distractors == []:
+            continue;
+        else:
+            current_Answer_list = random.sample(distractors, min(3, len(distractors)))
+            if current_Answer_list != []:
+                current_Answer_list.append(target_word)
+                random.shuffle(current_Answer_list)
+            for similaritys in current_Answer_list:
+                doc = nlp(similaritys);
+                val = ansnlp.similarity(doc);
+                similarity.append(val);
+            for value in similarity:
+                if value == 1.0:
+                    difficulty.append(10)
+                elif 0.7 <= value < 1.0:
+                    difficulty.append(7)
+                elif 0.4 <= value < 0.7:
+                    difficulty.append(4)
+                else:
+                    difficulty.append(0)
+            var = textstat.automated_readability_index(question)
+            if var < 6 :
+                que_diff = "easy"
+            elif 6 <= var < 9:
+                que_diff = "medium"
+            else :
+                que_diff = "hard"
+            from Format import Format
+            question_dict = Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId)
+        Proper_QA.append(question_dict)
+        i+=1;
+    return Proper_QA
+
+
+
+
+
+
+@app.route('/GenerateNextQ', methods=['POST'])
+def GenerateNQ():
+    TestInformation = request.json;
+    print(TestInformation)
+    return jsonify({"next": "what is national bird "}), 200
 
 
 
