@@ -554,6 +554,7 @@ def Start(text):
             question_dict = Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId)
         Proper_QA.append(question_dict)
         i+=1;
+        
     return Proper_QA
 
 
