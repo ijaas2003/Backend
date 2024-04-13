@@ -328,7 +328,7 @@ def upload_file():
     text = StartGenerate(uploaded_file.filename, "Data.txt");
     if text:
         def GenerateId(lens):
-            total = string.ascii_letters + string.digits + string.punctuation;
+            total = string.ascii_letters + string.digits;
             Id = ''.join(random.choice(total) for _ in range(lens))
             return Id
         global QuestionId;
@@ -457,7 +457,7 @@ def Start(text):
         keywords_set = set(keywords_list)
         common = keys_set.intersection(keywords_set)
         common_keywords.append(list(common))
-    question_tokenizer = T5Tokenizer.from_pretrained('t5-large')
+    question_tokenizer = T5Tokenizer.from_pretrained('t5-large',legacy=False)
     question_model = T5ForConditionalGeneration.from_pretrained('Parth/result')
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     question_model = question_model.to(device)
