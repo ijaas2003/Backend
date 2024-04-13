@@ -151,7 +151,6 @@ app.register_blueprint(auth_bp)
 
 
 
-
 # ! Routing 
 @app.route('/', methods=['GET'])
 def example():
@@ -276,13 +275,14 @@ def faculty_login():
     
     if re.match(Email_Regex, faculty_email):
         userdata = db['faculty'].find_one({"faculty_email": faculty_email})  # Correct field name here
-        print(userdata)
+        faculty = userdata.get('_id');
+        print(faculty)
         if userdata is not None:
             stored_pass = userdata.get('faculty_pass')  # Correct field name here
             print(stored_pass)
             if stored_pass == faculty_pass:
                 print("success")
-                response = make_response({"message": "Success"})
+                response = make_response({"message": str(faculty)})
                 response.status_code = 201
                 return response
             else:
@@ -319,7 +319,10 @@ def GetData(Type,id):
 
 @app.route('/upload', methods=["POST"])
 def upload_file():
+    global FacId;
     uploaded_file = request.files['file']
+    FacId = request.form['facultyId']
+    print({"This is facid" : FacId})
     File_path = os.path.join(current_dir, 'Pdf', uploaded_file.filename);
     uploaded_file.save(File_path);
     text = StartGenerate(uploaded_file.filename, "Data.txt");
@@ -332,7 +335,11 @@ def upload_file():
         QuestionId = GenerateId(lens=10);
         process = Start(text=text);
         print(process)
-        return jsonify({"message": "success"})
+        res = db['questions'].insert_many(process)
+        if res.acknowledged:
+            return jsonify({"message": "Questions Stores"});
+        else:
+            return jsonify({"error": "Error occur while Generating"})
     
     
 def Start(text):
@@ -551,10 +558,9 @@ def Start(text):
             else :
                 que_diff = "hard"
             from Format import Format
-            question_dict = Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId)
+            question_dict = Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId, FacId)
         Proper_QA.append(question_dict)
         i+=1;
-        
     return Proper_QA
 
 
@@ -565,7 +571,7 @@ def Start(text):
 @app.route('/GenerateNextQ', methods=['POST'])
 def GenerateNQ():
     TestInformation = request.json;
-    print(TestInformation)
+    #print(TestInformation)
     return jsonify({"next": "what is national bird "}), 200
 
 
