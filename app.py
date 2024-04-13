@@ -28,19 +28,19 @@ from heapq import nlargest
 import random
 import numpy as np;
 
-import gensim.downloader as api
+# import gensim.downloader as api
 
-# Explicitly load the cached model, if available
-model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+# # Explicitly load the cached model, if available
+# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-if model_path:
-    # Model is cached, load it
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model loaded from cache")
-else:
-    # Model is not cached, download it
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model downloaded")
+# if model_path:
+#     # Model is cached, load it
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model loaded from cache")
+# else:
+#     # Model is not cached, download it
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model downloaded")
 
 # Now you can use the glove_model for further processing
 
@@ -101,7 +101,6 @@ logging.basicConfig(filename='User_Log.log', level=logging.INFO, format='%(ascti
 
 
 
-
 # ! Regex 
 Email_Regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 Alpha_Regex = r'^[a-zA-Z]+$'
@@ -142,8 +141,6 @@ jwt = JWTManager(app)
 
 
 app.register_blueprint(auth_bp)
-
-
 
 
 
@@ -303,9 +300,14 @@ def faculty_login():
 def GetData(Type,id):
     print(Type, id)
     if Type == "faculty":
-        return jsonify({"Success": "fac Success"})
+        FacultyData = db['faculty'].find_one({"_id":id})
+        print(FacultyData)
+        if FacultyData:
+            return jsonify({"message": "Data available"})
+        else:
+            return jsonify({"error": "Not available"})
     else:
-        return jsonify({"Success": "user Success"})
+        return jsonify({"message": "user Success"})
 
 
 
@@ -321,8 +323,11 @@ def GetData(Type,id):
 def upload_file():
     global FacId;
     uploaded_file = request.files['file']
+    startingTime = request.form['startingTime']
+    endingTime = request.form['endingTime']
     FacId = request.form['facultyId']
-    print({"This is facid" : FacId})
+    duration = request.form['duration']
+    print(FacId, startingTime, endingTime, duration)
     File_path = os.path.join(current_dir, 'Pdf', uploaded_file.filename);
     uploaded_file.save(File_path);
     text = StartGenerate(uploaded_file.filename, "Data.txt");
@@ -335,11 +340,24 @@ def upload_file():
         QuestionId = GenerateId(lens=10);
         process = Start(text=text);
         print(process)
+        data = {
+            "QuestionId": QuestionId,
+            "StartingTime": startingTime,
+            "EndingTime": endingTime,
+            "Duration": duration
+        }
         res = db['questions'].insert_many(process)
-        if res.acknowledged:
+        que_res = db['questionstiming'].insert_one(data)
+        if all([res.acknowledged, que_res.acknowledged]):
             return jsonify({"message": "Questions Stores"});
         else:
             return jsonify({"error": "Error occur while Generating"})
+    else:
+        return jsonify({"error": "There is no data in the given pdf"})
+    
+    
+    
+    
     
     
 def Start(text):
