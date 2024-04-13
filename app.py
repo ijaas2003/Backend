@@ -28,19 +28,19 @@ from heapq import nlargest
 import random
 import numpy as np;
 
-# import gensim.downloader as api
+import gensim.downloader as api
 
-# # Explicitly load the cached model, if available
-# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+# Explicitly load the cached model, if available
+model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-# if model_path:
-#     # Model is cached, load it
-#     glove_model = api.load("glove-wiki-gigaword-300")
-#     print("Model loaded from cache")
-# else:
-#     # Model is not cached, download it
-#     glove_model = api.load("glove-wiki-gigaword-300")
-#     print("Model downloaded")
+if model_path:
+    # Model is cached, load it
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model loaded from cache")
+else:
+    # Model is not cached, download it
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model downloaded")
 
 # Now you can use the glove_model for further processing
 
@@ -129,7 +129,8 @@ except Exception as e:
 if 'users' not in db.list_collection_names():
     db.create_collection('users')
 
-
+if 'tests' not in db.list_collection_names():
+    db.create_collection('tests')
 
 
 
@@ -327,7 +328,8 @@ def upload_file():
     endingTime = request.form['endingTime']
     FacId = request.form['facultyId']
     duration = request.form['duration']
-    print(FacId, startingTime, endingTime, duration)
+    print( startingTime,FacId, endingTime, duration)
+
     File_path = os.path.join(current_dir, 'Pdf', uploaded_file.filename);
     uploaded_file.save(File_path);
     text = StartGenerate(uploaded_file.filename, "Data.txt");
@@ -339,16 +341,17 @@ def upload_file():
         global QuestionId;
         QuestionId = GenerateId(lens=10);
         process = Start(text=text);
-        print(process)
-        data = {
-            "QuestionId": QuestionId,
-            "StartingTime": startingTime,
-            "EndingTime": endingTime,
-            "Duration": duration
+        print(process) 
+        datas ={
+            "fac_ID":FacId,
+            "Que_ID":QuestionId,
+            "starting_time":startingTime,
+            "ending_time":endingTime,
+            "duration":duration
         }
-        res = db['questions'].insert_many(process)
-        que_res = db['questionstiming'].insert_one(data)
-        if all([res.acknowledged, que_res.acknowledged]):
+        print(datas)
+        res=db['tests'].insert_one(datas);
+        if (res.acknowledged):
             return jsonify({"message": "Questions Stores"});
         else:
             return jsonify({"error": "Error occur while Generating"})
