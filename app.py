@@ -348,7 +348,7 @@ def upload_file():
             "EndingTime": endingTime,
             "Duration": duration,
             "FacultyId": FacId
-        }
+        } 
         res = db['questions'].insert_many(process)
         que_res = db['questionstiming'].insert_one(data)
         if all([res.acknowledged, que_res.acknowledged]):
