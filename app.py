@@ -279,7 +279,7 @@ def faculty_login():
             print(stored_pass)
             if stored_pass == faculty_pass:
                 print("success")
-                response = make_response({"message": str(faculty)})
+                response = make_response({"message": "Successfully Login", "facultyId": str(faculty)})
                 response.status_code = 201
                 return response
             else:
@@ -295,15 +295,16 @@ def faculty_login():
 
 
 
-
+from bson.objectid import ObjectId
 @app.route('/GetUserData/<Type>/<id>')
 def GetData(Type,id):
     print(Type, id)
+    id = ObjectId(id)
     if Type == "faculty":
-        FacultyData = db['faculty'].find_one({"_id":id})
+        FacultyData = db['faculty'].find_one({"_id": id}, {"_id":0});
         print(FacultyData)
         if FacultyData:
-            return jsonify({"message": "Data available"})
+            return jsonify({"message": FacultyData});
         else:
             return jsonify({"error": "Not available"})
     else:
