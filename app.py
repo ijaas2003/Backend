@@ -348,11 +348,12 @@ def upload_file():
             "QuestionId": QuestionId,
             "StartingTime": startingTime,
             "EndingTime": endingTime,
-            "Duration": duration
+            "Duration": duration,
+            "FacultyId": FacId
         }
-        print(datas)
-        res=db['tests'].insert_one(datas);
-        if (res.acknowledged):
+        res = db['questions'].insert_many(process)
+        que_res = db['questionstiming'].insert_one(data)
+        if all([res.acknowledged, que_res.acknowledged]):
             return jsonify({"message": "Questions Stores"});
         else:
             return jsonify({"error": "Error occur while Generating"})
