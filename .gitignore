@@ -4,3 +4,5 @@ Data/Data.txt
 Data/Question.txt
 Data/CleanedText.txt
 Pdf/
+schema/__pycache__
+src/__pycache__

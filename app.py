@@ -271,11 +271,11 @@ def faculty_login():
         return jsonify({"error": "Enter all fields"})
     
     if re.match(Email_Regex, faculty_email):
-        userdata = db['faculty'].find_one({"faculty_email": faculty_email})  # Correct field name here
+        userdata = db['faculty'].find_one({"faculty_email": faculty_email})
         faculty = userdata.get('_id');
         print(faculty)
         if userdata is not None:
-            stored_pass = userdata.get('faculty_pass')  # Correct field name here
+            stored_pass = userdata.get('faculty_pass') 
             print(stored_pass)
             if stored_pass == faculty_pass:
                 print("success")
@@ -299,12 +299,13 @@ from bson.objectid import ObjectId
 @app.route('/GetUserData/<Type>/<id>')
 def GetData(Type,id):
     print(Type, id)
-    id = ObjectId(id)
+    ids = ObjectId(id)
     if Type == "faculty":
-        FacultyData = db['faculty'].find_one({"_id": id}, {"_id":0});
-        print(FacultyData)
-        if FacultyData:
-            return jsonify({"message": FacultyData});
+        FacultyData = db['faculty'].find_one({"_id": ids}, {"_id":0});
+        Questions = list(db['questionstiming'].find({"FacultyId":id}, {"_id":0}));
+        print(FacultyData, Questions)
+        if FacultyData is not None:
+            return jsonify({"message": "Retrived Succussfull", "FacultyData": FacultyData, "questionsData": Questions});
         else:
             return jsonify({"error": "Not available"})
     else:
@@ -345,7 +346,8 @@ def upload_file():
             "QuestionId": QuestionId,
             "StartingTime": startingTime,
             "EndingTime": endingTime,
-            "Duration": duration
+            "Duration": duration,
+            "FacultyId": FacId
         }
         res = db['questions'].insert_many(process)
         que_res = db['questionstiming'].insert_one(data)
