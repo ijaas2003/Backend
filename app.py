@@ -28,19 +28,19 @@ from heapq import nlargest
 import random
 import numpy as np;
 
-import gensim.downloader as api
+# import gensim.downloader as api
 
-# Explicitly load the cached model, if available
-model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+# # Explicitly load the cached model, if available
+# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-if model_path:
-    # Model is cached, load it
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model loaded from cache")
-else:
-    # Model is not cached, download it
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model downloaded")
+# if model_path:
+#     # Model is cached, load it
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model loaded from cache")
+# else:
+#     # Model is not cached, download it
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model downloaded")
 
 # Now you can use the glove_model for further processing
 
