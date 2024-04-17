@@ -1,4 +1,4 @@
-def Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId, facultyId):
+def Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId, facultyId, diffvalue):
      json_format = {
 		"Id": f"{question}",
           "Question": f"{question}",
@@ -6,6 +6,7 @@ def Format(question, answer, que_diff, distractors, similarity, difficulty, Ques
           "Que_Difficulty": f"{que_diff}",
           "Distractors": [f"{distractors[0]}", f"{distractors[1]}", f"{distractors[2]}", f"{distractors[3]}"],
           "Similarity": similarity,
+          "QuestionDiff": diffvalue,
           "Difficulty": difficulty,
           "QuestionID": f"{QuestionId}",
           "FacultyId": f"{facultyId}"
