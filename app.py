@@ -28,7 +28,7 @@ from heapq import nlargest
 import random
 import numpy as np;
 
-import gensim.downloader as api
+# import gensim.downloader as api
 
 # # Explicitly load the cached model, if available
 # model_path = api.load("glove-wiki-gigaword-300", return_path=True)
