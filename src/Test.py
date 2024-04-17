@@ -1,9 +1,10 @@
-import nltk;
-import spacy;
+from datetime import datetime, timedelta
 
-nlp = spacy.load('en_core_web_sm');
+# Get the current system time
+systime = datetime.now()
 
-text = nlp()
+# Add 30 minutes to the current system time
+new_time = systime + timedelta(minutes=30)
 
-
-a = 10;
+print("Current System Time:", systime)
+print("New Time after adding 30 minutes:", new_time)

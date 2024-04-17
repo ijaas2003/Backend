@@ -7,7 +7,7 @@ import string
 # import json
 # import ast
 import re
-from datetime import datetime
+from datetime import datetime,timedelta
 import textstat
 import errno
 from collections import Counter
@@ -350,6 +350,7 @@ def studentReg():
 def upload_file():
     global FacId;
     systime=datetime.now()
+    systime=systime + timedelta(minutes=30)
     # print(systime)
     # print(type(systime))
     uploaded_file = request.files['file']
