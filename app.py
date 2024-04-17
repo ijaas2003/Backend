@@ -7,7 +7,7 @@ import string
 # import json
 # import ast
 import re
-import datetime
+from datetime import datetime
 import textstat
 import errno
 from collections import Counter
@@ -222,6 +222,8 @@ def faculty_register():
     faculty_name, faculty_email, faculty_pass, faculty_confirm_pass, faculty_dept, faculty_taught = (
         str(data['username']), str(data['email']), str(data['pass']), str(data['c_pass']), str(data['dept']), str(data['taught'])
     )
+    faculty_name=faculty_name.strip()
+    faculty_email=faculty_email.strip()
     if any([faculty_email == "", faculty_confirm_pass == "", faculty_name == "", faculty_pass == "", faculty_taught == "", faculty_dept == ""]):
         return jsonify({"error": "Please Enter all the Fields"})
     if all([re.match(Email_Regex, faculty_email), re.match(Alpha_Regex, faculty_name)]):
@@ -266,7 +268,8 @@ def faculty_register():
 def faculty_login():
     data = request.json
     faculty_email, faculty_pass = str(data['email']), str(data['pass'])
-    
+    faculty_email=faculty_email.strip()
+    faculty_pass=faculty_pass.strip()
     if any([faculty_email == "", faculty_pass == ""]):
         return jsonify({"error": "Enter all fields"})
     
@@ -357,12 +360,56 @@ def studentReg():
 @app.route('/upload', methods=["POST"])
 def upload_file():
     global FacId;
+    systime=datetime.now()
+    # print(systime)
+    # print(type(systime))
     uploaded_file = request.files['file']
     startingTime = request.form['startingTime']
     endingTime = request.form['endingTime']
     FacId = request.form['facultyId']
     duration = request.form['duration']
-    print( startingTime,FacId, endingTime, duration)
+    input_format = '%Y-%m-%dT%H:%M'
+    input_format1 = '%H:%M'
+    startingTime_convert = datetime.strptime(startingTime, input_format)
+    endingTime_convert = datetime.strptime(endingTime,input_format)
+    duration_convert=datetime.strptime(duration,input_format1)
+    duration_time = duration_convert.time()
+    duration_minutes = duration_time.hour * 60 + duration_time.minute
+    # print(duration_minutes)
+    # print(type(duration_minutes))
+    dur=endingTime_convert - startingTime_convert
+    dur_minutes = dur.total_seconds() / 60
+    if type(dur_minutes) == float:
+        dur_minutes=int(dur_minutes)
+    # print(dur_minutes)
+    # print(type(dur_minutes))
+
+    # end=dur+startingTime_convert
+
+    # # dur = end -startingTime_convert
+    # print(type(end))
+    # print(end)
+    # # print(dur)
+    # # print(type(dur))
+    # print(duration)
+    # print(type(duration))
+    # # print(dur)
+    # # if (duration < dur):
+    # #     print("yees")
+    # # datetime1 = datetime.strptime(str(systime), "%Y-%m-%d %H:%M:%S.%f")
+    # # print(datetime1)
+    # # print( startingTime_convert)
+    # # print(type(startingTime_convert))
+    if startingTime_convert >= systime:
+        if endingTime_convert > startingTime_convert:
+            if duration_minutes < dur_minutes:
+                print("yes")
+            else:
+                return jsonify({"error": "Provide Correct Duration"})
+        else:
+            return jsonify({"error": "Provide  correct ending time"})
+    else:
+        return jsonify({"error": " provide correct starting time"}) 
 
     File_path = os.path.join(current_dir, 'Pdf', uploaded_file.filename);
     uploaded_file.save(File_path);
