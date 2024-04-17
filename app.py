@@ -41,7 +41,7 @@ import numpy as np;
 #     # Model is not cached, download it
 #     glove_model = api.load("glove-wiki-gigaword-300")
 #     print("Model downloaded")
-# Now you can use the glove_model for further processing
+# # Now you can use the glove_model for further processing
 
 
 
@@ -375,31 +375,10 @@ def upload_file():
     duration_convert=datetime.strptime(duration,input_format1)
     duration_time = duration_convert.time()
     duration_minutes = duration_time.hour * 60 + duration_time.minute
-    # print(duration_minutes)
-    # print(type(duration_minutes))
     dur=endingTime_convert - startingTime_convert
     dur_minutes = dur.total_seconds() / 60
     if type(dur_minutes) == float:
         dur_minutes=int(dur_minutes)
-    # print(dur_minutes)
-    # print(type(dur_minutes))
-
-    # end=dur+startingTime_convert
-
-    # # dur = end -startingTime_convert
-    # print(type(end))
-    # print(end)
-    # # print(dur)
-    # # print(type(dur))
-    # print(duration)
-    # print(type(duration))
-    # # print(dur)
-    # # if (duration < dur):
-    # #     print("yees")
-    # # datetime1 = datetime.strptime(str(systime), "%Y-%m-%d %H:%M:%S.%f")
-    # # print(datetime1)
-    # # print( startingTime_convert)
-    # # print(type(startingTime_convert))
     if startingTime_convert >= systime:
         if endingTime_convert > startingTime_convert:
             if duration_minutes < dur_minutes:
@@ -673,17 +652,20 @@ def Start(text):
 @app.route('/getquestion', methods=['POST'])
 def GenerateNQ():
     data = request.json;
-    email, queid = data['email'], data['queid'];
+    email, queid, password = data['email'], data['queid'], data['pass'];
     checkuser = db['studentReg'].find_one({"student_email": email});
     if checkuser is not None:
-        quesid = db['questionstiming'].find_one({"QuestionId": queid})
-        Questions = db['questions'].find({"QuestionId": queid})
-        print(list(Questions));
-        if quesid is not None:
-            Token = GeneratedToken(email);
-            return jsonify({"message": "Lets Start the Test", "startTest": Token, "UserId": str(checkuser['_id']), "duration": quesid['Duration']}), 200;
+        if password == checkuser['student_pass']:
+            quesid = db['questionstiming'].find_one({"QuestionId": queid})
+            Questions = list(db['questions'].find({}))
+            print(Questions)
+            if quesid is not None:
+                Token = GeneratedToken(email);
+                return jsonify({"message": "Lets Start the Test", "startTest": Token, "UserId": str(checkuser['_id']), "duration": quesid['Duration']}), 200;
+            else:
+                return jsonify({"error": "Invalid Question Id"});
         else:
-            return jsonify({"error": "Invalid Question Id"});
+            return jsonify({"error": "Invalid User password"})
     else:
         return jsonify({"error": "there is no user"})
 
