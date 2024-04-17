@@ -41,8 +41,7 @@ import numpy as np;
 #     # Model is not cached, download it
 #     glove_model = api.load("glove-wiki-gigaword-300")
 #     print("Model downloaded")
-
-# Now you can use the glove_model for further processing
+# # Now you can use the glove_model for further processing
 
 
 
@@ -322,6 +321,39 @@ def GetData(Type,id):
 
 
 
+@app.route('/studentReg', methods=['POST'])
+def studentReg():
+    data = request.json;
+    stud_name, stud_pass, stud_repass, stud_course, stud_email = data['username'], data['password'], data['rePassword'], data['Course'], data['email'];
+    #print(stud_name, stud_email , stud_pass, stud_repass, stud_course)
+    
+    if any([stud_course == "", stud_email == "", stud_name == "", stud_pass == "", stud_repass == ""]):
+        return jsonify({"error": "Please Fill all the Fields"})
+    if all([re.match(Email_Regex, stud_email), re.match(Alpha_Regex, stud_name), re.match(Alpha_Regex, stud_course)]):
+        if stud_pass == stud_repass:
+            check = db['studentReg'].find_one({"student_email": stud_email});
+            print(check)
+            if check is None:
+                student_details = {
+                    "student_name": stud_name,
+                    "student_email": stud_email,
+                    "student_course": stud_course,
+                    "student_pass": stud_pass,
+                    "student_repass": stud_repass
+                }
+                res = db['studentReg'].insert_one(student_details);
+                return jsonify({"message": "Successfull Registered"});
+            else:
+                return jsonify({"error": "user Already Available"})
+        else:
+            return jsonify({"error": "Password Does not match"})
+    else:
+        return jsonify({"error": "Check name, email and course"})
+
+
+
+
+
 
 
 
@@ -344,31 +376,10 @@ def upload_file():
     duration_convert=datetime.strptime(duration,input_format1)
     duration_time = duration_convert.time()
     duration_minutes = duration_time.hour * 60 + duration_time.minute
-    # print(duration_minutes)
-    # print(type(duration_minutes))
     dur=endingTime_convert - startingTime_convert
     dur_minutes = dur.total_seconds() / 60
     if type(dur_minutes) == float:
         dur_minutes=int(dur_minutes)
-    # print(dur_minutes)
-    # print(type(dur_minutes))
-
-    # end=dur+startingTime_convert
-
-    # # dur = end -startingTime_convert
-    # print(type(end))
-    # print(end)
-    # # print(dur)
-    # # print(type(dur))
-    # print(duration)
-    # print(type(duration))
-    # # print(dur)
-    # # if (duration < dur):
-    # #     print("yees")
-    # # datetime1 = datetime.strptime(str(systime), "%Y-%m-%d %H:%M:%S.%f")
-    # # print(datetime1)
-    # # print( startingTime_convert)
-    # # print(type(startingTime_convert))
     if startingTime_convert >= systime:
         if endingTime_convert > startingTime_convert:
             if duration_minutes < dur_minutes:
@@ -639,12 +650,30 @@ def Start(text):
 
 
 
-@app.route('/GenerateNextQ', methods=['POST'])
+@app.route('/getquestion', methods=['POST'])
 def GenerateNQ():
-    TestInformation = request.json;
-    #print(TestInformation)
-    return jsonify({"next": "what is national bird "}), 200
+    data = request.json;
+    email, queid, password = data['email'], data['queid'], data['pass'];
+    checkuser = db['studentReg'].find_one({"student_email": email});
+    if checkuser is not None:
+        if password == checkuser['student_pass']:
+            quesid = db['questionstiming'].find_one({"QuestionId": queid})
+            Questions = list(db['questions'].find({}))
+            print(Questions)
+            if quesid is not None:
+                Token = GeneratedToken(email);
+                return jsonify({"message": "Lets Start the Test", "startTest": Token, "UserId": str(checkuser['_id']), "duration": quesid['Duration']}), 200;
+            else:
+                return jsonify({"error": "Invalid Question Id"});
+        else:
+            return jsonify({"error": "Invalid User password"})
+    else:
+        return jsonify({"error": "there is no user"})
 
+
+@app.route('/getMcq', methods=['POST'])
+def getQue():
+    return ""
 
 
 
