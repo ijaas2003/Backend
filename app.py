@@ -647,17 +647,19 @@ hard = []
 @app.route('/getquestion', methods=['POST'])
 def GenerateNQ():
     data = request.json;
-    email, queid, course, testToken, duration,queObjid, answer = (
-            str(data['email']),
-            str(data['queid']),
-            str(data['Dept']),
-        );
-    e = db['studentReg'].find_one({'student_email': email});
-    if e is not None:
-        if testToken == "":
+    testToken = str(data['testToken']);
+    if testToken == "":
+        email, queid, course = (
+                str(data['email']),
+                str(data['queid']),
+                str(data['Dept']),
+            );
+        e = db['studentReg'].find_one({'student_email': email});
+        if e is not None:
+            
             quesid = db['questionstiming'].find_one({"QuestionId": queid})
             Questions = list(db['questions'].find({}, {"Id": 0}))
-            for que in Questions: 
+            for que in Questions:
                 print(que['Que_Difficulty'])
                 if que['Que_Difficulty'] == "easy":
                     easy.append(que);
@@ -674,7 +676,7 @@ def GenerateNQ():
                         "email": email,
                         "course": course,
                         "QueId": queid,
-                        "score": 0, 
+                        "score": 0,
                         "Questionsattented": 0
                     }
                     res = db['studentattended'].insert_one(datas);
