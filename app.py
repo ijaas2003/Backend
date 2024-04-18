@@ -651,10 +651,6 @@ def GenerateNQ():
             str(data['email']),
             str(data['queid']),
             str(data['Dept']),
-            str(data['testToken']),
-            str(data['duration']),
-            str(data['queobjid']),
-            str(data['answer'])
         );
     e = db['studentReg'].find_one({'student_email': email});
     if e is not None:
@@ -688,7 +684,11 @@ def GenerateNQ():
             else:
                 return jsonify({"error": "Invalid Question Id"});
         else:
-            
+            duration,queobjid,answer = (
+                str(data['duration']),
+                str(data['queobjid']),
+                str(data['answer']) 
+            )
             QueGen = ChooseCrtQues(
                     db=db,
                     easy=easy,
@@ -696,7 +696,7 @@ def GenerateNQ():
                     hard=hard,
                     duration=duration,
                     answer=answer.lower(), 
-                    id=queObjid
+                    id=queobjid
                 );
             return jsonify({"message":"Continue Exam", "Question": QueGen['Question'], "Distractors": QueGen['Distractors'], "Questionobjid": str(QueGen['_id'])})
     else:
