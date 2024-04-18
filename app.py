@@ -659,7 +659,7 @@ def GenerateNQ():
             
             quesid = db['questionstiming'].find_one({"QuestionId": queid})
             Questions = list(db['questions'].find({}, {"Id": 0}))
-            for que in Questions:
+            for que in Questions: 
                 print(que['Que_Difficulty'])
                 if que['Que_Difficulty'] == "easy":
                     easy.append(que);
