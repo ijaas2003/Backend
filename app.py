@@ -30,20 +30,20 @@ import numpy as np;
 from ChooseQue import RandomQue, ChooseCrtQues;
 
 
-import gensim.downloader as api
+# import gensim.downloader as api
 
-# # Explicitly load the cached model, if available
+# # # Explicitly load the cached model, if available
 # model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
 # if model_path:
-#     # Model is cached, load it
+# #     # Model is cached, load it
 #     glove_model = api.load("glove-wiki-gigaword-300")
 #     print("Model loaded from cache")
 # else:
-#     # Model is not cached, download it
+# #     # Model is not cached, download it
 #     glove_model = api.load("glove-wiki-gigaword-300")
 #     print("Model downloaded")
-# # Now you can use the glove_model for further processing
+# Now you can use the glove_model for further processing
 
 
 
@@ -105,8 +105,6 @@ logging.basicConfig(filename='User_Log.log', level=logging.INFO, format='%(ascti
 # ! Regex 
 Email_Regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 Alpha_Regex = r'^[a-zA-Z]+$'
-Name_Regex =r'^[A-Z][a-z]*\s[A-Z]\.?\s?[A-Z][a-z]*$'
-
 
 
 
@@ -174,9 +172,7 @@ def student_login():
     data = request.json
     username, email, question_id, course = str(data['username']), str(data['email']), str(data['queid']), str(data['Course'])
     data['exp'] = datetime.datetime.now() + datetime.timedelta(days=1)
-    if any([username == "", email == "", question_id == "", course == ""]):
-        return jsonify({"error": "Please Enter all the Fields"})
-    if any([re.match(Email_Regex, email),re.match(Name_Regex,username)]):
+    if re.match(Email_Regex, email):
         print(username, email, course, question_id)
         Token = GeneratedToken(username)  # Assuming this function is defined correctly
         
@@ -194,24 +190,9 @@ def student_login():
 @app.route('/LoginToDash', methods=['POST'])
 def LoginToDash():
     data = request.json;
-    stu_email,stu_pass =str(data['email']),str(data['pass'])
-    # print(stu_email,stu_pass)
-    if any([stu_email == "",stu_pass == ""]):
-        return jsonify({"error": "Please Enter all the Fields"})
-    if re.match(Email_Regex, stu_email):
-        userdata=db['studentReg'].find_one({"student_email":stu_email});
-        print(userdata)
-        if userdata is not None:
-            store_pass=userdata.get('student_pass')
-            print(store_pass)
-            if store_pass == stu_pass:
-                return jsonify({ "message": "success" })
-            else:
-                return jsonify({"error":"Enter Correct Password"})
-        else :
-            return jsonify({"error":"Invalid Login"})
-    else:
-        return jsonify({"error":"Enter Correct EmailID"})
+    print(data);
+    return jsonify({ "message": "success" })
+
 
 
 
@@ -283,11 +264,10 @@ def faculty_login():
     
     if re.match(Email_Regex, faculty_email):
         userdata = db['faculty'].find_one({"faculty_email": faculty_email})
-        # faculty = userdata.get('_id');
-        # print(faculty)
+        faculty = userdata.get('_id');
+        print(faculty)
         if userdata is not None:
-            stored_pass = userdata.get('faculty_pass')
-            faculty = userdata.get('_id'); 
+            stored_pass = userdata.get('faculty_pass') 
             print(stored_pass)
             if stored_pass == faculty_pass:
                 print("success")
@@ -333,8 +313,8 @@ def GetData(Type,id):
 @app.route('/studentReg', methods=['POST'])
 def studentReg():
     data = request.json;
-    stud_name, stud_pass, stud_repass, stud_course, stud_email = data['username'], data['password'], data['rePassword'], data['Dept'], data['email'];
-    print(stud_name, stud_email , stud_pass, stud_repass, stud_course)
+    stud_name, stud_pass, stud_repass, stud_course, stud_email = data['username'], data['password'], data['rePassword'], data['Course'], data['email'];
+    #print(stud_name, stud_email , stud_pass, stud_repass, stud_course)
     
     if any([stud_course == "", stud_email == "", stud_name == "", stud_pass == "", stud_repass == ""]):
         return jsonify({"error": "Please Fill all the Fields"})
@@ -346,7 +326,7 @@ def studentReg():
                 student_details = {
                     "student_name": stud_name,
                     "student_email": stud_email,
-                    "student_dept": stud_course,
+                    "student_course": stud_course,
                     "student_pass": stud_pass,
                     "student_repass": stud_repass
                 }
@@ -378,9 +358,6 @@ def upload_file():
     endingTime = request.form['endingTime']
     FacId = request.form['facultyId']
     duration = request.form['duration']
-    que_count=request.form['que_count']
-    if any([startingTime == "", endingTime == "", que_count == "", duration == ""]):
-        return jsonify({"error": "Fill all the fields"})
     input_format = '%Y-%m-%dT%H:%M'
     input_format1 = '%H:%M'
     startingTime_convert = datetime.strptime(startingTime, input_format)
@@ -410,33 +387,27 @@ def upload_file():
         def GenerateId(lens):
             total = string.ascii_letters + string.digits;
             Id = ''.join(random.choice(total) for _ in range(lens))
-            Id =Id.capitalize()
             return Id
         global QuestionId;
-        QuestionId = GenerateId(lens=6);
-        process,count = Start(text=text);
-        print(count)
+        QuestionId = GenerateId(lens=10);
+        process = Start(text=text);
         print(process)
-        if int(que_count) > count:
-            return jsonify({"error":"This pdf canont have that amount of questions "})
+        data = {
+            "QuestionId": QuestionId,
+            "StartingTime": startingTime,
+            "EndingTime": endingTime,
+            "Duration": duration,
+            "FacultyId": FacId
+        }
+        res = db['questions'].insert_many(process)
+        que_res = db['questionstiming'].insert_one(data)
+        if all([res.acknowledged, que_res.acknowledged]):
+            return jsonify({"message": "Questions Stores"});
         else:
-            data = {
-                "QuestionId": QuestionId,
-                "StartingTime": startingTime,
-                "EndingTime": endingTime,
-                "Duration": duration,
-                "FacultyId": FacId,
-                "que_count":que_count
-            }
-            res = db['questions'].insert_many(process)
-            que_res = db['questionstiming'].insert_one(data)
-            if all([res.acknowledged, que_res.acknowledged]):
-                return jsonify({"message": "Questions Stores"});
-            else:
-                return jsonify({"error": "Error occur while Generating"})
+            return jsonify({"error": "Error occur while Generating"})
     else:
         return jsonify({"error": "There is no data in the given pdf"})
-        
+    
     
     
     
@@ -588,8 +559,7 @@ def Start(text):
         return que_pair
 
     questions = generate_questions(summaries, common_keywords, question_model, question_tokenizer)
-    # count=len(questions)
-    # print(count)
+    
     def remove_words(input_string, words_to_remove):
         Removed_n = input_string.replace("\n", "");
         words = input_string.split()
@@ -621,7 +591,6 @@ def Start(text):
 
     current_Answer_list = []
     Proper_QA = [];
-    count=0
     RemoveWords = ["its", "a", "the", "this", "page n01", "n01"];
     i = 1;
     for index, (question, answer) in enumerate(questions, start = 1):
@@ -660,12 +629,10 @@ def Start(text):
             else :
                 que_diff = "hard"
             from Format import Format
-            question_dict = Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId, FacId)
+            question_dict = Format(question, ans, que_diff, current_Answer_list, similarity, difficulty, QuestionId, FacId, var)
         Proper_QA.append(question_dict)
-        count+=1
         i+=1;
-    return Proper_QA,count
-
+    return Proper_QA
 
 
 
