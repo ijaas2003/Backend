@@ -680,10 +680,11 @@ hard = []
 @app.route('/getquestion', methods=['POST'])
 def GenerateNQ():
     data = request.json;
-    email, queid, course, testToken, duration,queObjid, answer = (
+    email, queid, course, testToken = (
             str(data['email']),
             str(data['queid']),
             str(data['Dept']),
+            str(data['testToken']),
         );
     e = db['studentReg'].find_one({'student_email': email});
     if e is not None:
