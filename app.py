@@ -32,18 +32,18 @@ from ChooseQue import RandomQue, ChooseCrtQues;
 
 # import gensim.downloader as api
 
-# # Explicitly load the cached model, if available
+# # # Explicitly load the cached model, if available
 # model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
 # if model_path:
-#     # Model is cached, load it
+# #     # Model is cached, load it
 #     glove_model = api.load("glove-wiki-gigaword-300")
 #     print("Model loaded from cache")
 # else:
-#     # Model is not cached, download it
+# #     # Model is not cached, download it
 #     glove_model = api.load("glove-wiki-gigaword-300")
 #     print("Model downloaded")
-# # Now you can use the glove_model for further processing
+# Now you can use the glove_model for further processing
 
 
 
@@ -629,24 +629,10 @@ def Start(text):
             else :
                 que_diff = "hard"
             from Format import Format
-            question_dict = Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId, FacId, var)
+            question_dict = Format(question, ans, que_diff, current_Answer_list, similarity, difficulty, QuestionId, FacId, var)
         Proper_QA.append(question_dict)
         i+=1;
     return Proper_QA
-
-
-
-# Questions=[];
-
-
-
-# @app.route('/nextquestion', methods=['POST'])
-# def getQue():
-#     data = request.json;
-#     Id, duration, answer = str(data['id']), str(data['duration']), str(data['answer']);
-#     QueGen = ChooseQue(Questions);
-#     print(Id, duration, answer);
-#     return jsonify({ "message": "Received", "id": Id, "Question": QueGen});
 
 
 
@@ -661,36 +647,60 @@ hard = []
 @app.route('/getquestion', methods=['POST'])
 def GenerateNQ():
     data = request.json;
-    email, queid, course, testToken = str(data['email']), str(data['queid']), str(data['Dept']), str(data['testToken']);
-    if testToken == "":
-        quesid = db['questionstiming'].find_one({"QuestionId": queid})
-        Questions = list(db['questions'].find({}, {"Id": 0}))
-        for que in Questions:
-            print(que['Que_Difficulty'])
-            if que['Que_Difficulty'] == "easy":
-                easy.append(que);
-            elif que['Que_Difficulty'] == "medium":
-                medium.append(que)
-            elif que['Que_Difficulty'] == "hard":
-                hard.append(que);
-        if quesid is not None:
-            Token = GeneratedToken(email);
-            userData = db['studentattended'].find_one({ "email":email, "QueId": queid });
-            if userData == None:
-                datas = {
-                    "email": email,
-                    "course": course,
-                    "QueId": queid
-                }
-                res = db['studentattended'].insert_one(datas);
-                
-            QueGen = RandomQue(Questions);
-            return jsonify({"message": "Lets Start the Test",  "startTest": Token, "Question": QueGen}), 200;
+    email, queid, course, testToken, duration,queObjid, answer = (
+            str(data['email']),
+            str(data['queid']),
+            str(data['Dept']),
+            str(data['testToken']),
+            str(data['duration']),
+            str(data['queobjid']),
+            str(data['answer'])
+        );
+    e = db['studentReg'].find_one({'student_email': email});
+    if e is not None:
+        if testToken == "":
+            quesid = db['questionstiming'].find_one({"QuestionId": queid})
+            Questions = list(db['questions'].find({}, {"Id": 0}))
+            for que in Questions:
+                print(que['Que_Difficulty'])
+                if que['Que_Difficulty'] == "easy":
+                    easy.append(que);
+                elif que['Que_Difficulty'] == "medium":
+                    medium.append(que)
+                elif que['Que_Difficulty'] == "hard":
+                    hard.append(que);
+            
+            if quesid is not None:
+                Token = GeneratedToken(email);
+                userData = db['studentattended'].find_one({ "email":email, "QueId": queid });
+                #QuestionsAttented = db['studentattended'].find_one_and_update({"_id": ObjectId(id)})
+                if userData == None:
+                    datas = {
+                        "email": email,
+                        "course": course,
+                        "QueId": queid,
+                        "score": 0,
+                        "Questionsattented": 0
+                    }
+                    res = db['studentattended'].insert_one(datas);
+                QueGen = RandomQue(Questions);
+                return jsonify({"message": "Lets Start the Test",  "startTest": Token, "Question": QueGen['Question'], "Distractors": QueGen['Distractors'], "Questionobjid": str(QueGen['_id'])}), 200;
+            else:
+                return jsonify({"error": "Invalid Question Id"});
         else:
-            return jsonify({"error": "Invalid Question Id"});
+            
+            QueGen = ChooseCrtQues(
+                    db=db,
+                    easy=easy,
+                    medium=medium,
+                    hard=hard,
+                    duration=duration,
+                    answer=answer.lower(), 
+                    id=queObjid
+                );
+            return jsonify({"message":"Continue Exam", "Question": QueGen['Question'], "Distractors": QueGen['Distractors'], "Questionobjid": str(QueGen['_id'])})
     else:
-        QueGen = ChooseCrtQues(easy=easy, medium=medium, hard=hard);
-        return jsonify({"message":""})
+        return jsonify({"error" : "Invalid email"})
 
 
 
