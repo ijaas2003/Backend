@@ -686,7 +686,7 @@ def GenerateNQ():
                     "Question": QueGen['Question'],
                     "Distractors": QueGen['Distractors'], 
                 }
-                return jsonify({"message": "Lets Start the Test",  "startTest": Token, "questionStructure": questionStructure }), 200;
+                return jsonify({"message": "Lets Start the Test",  "startTest": Token, "questionStructure": questionStructure, "duration": quesid['Duration'] }), 200;
             else:
                 return jsonify({"error": "Invalid Question Id"});
         else:
