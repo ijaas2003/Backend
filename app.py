@@ -676,7 +676,7 @@ def GenerateNQ():
                         "email": email,
                         "course": course,
                         "QueId": queid,
-                        "score": 0,
+                        "score": 0, 
                         "Questionsattented": 0
                     }
                     res = db['studentattended'].insert_one(datas);
