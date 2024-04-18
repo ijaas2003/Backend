@@ -647,14 +647,16 @@ hard = []
 @app.route('/getquestion', methods=['POST'])
 def GenerateNQ():
     data = request.json;
-    email, queid, course, testToken, duration,queObjid, answer = (
-            str(data['email']),
-            str(data['queid']),
-            str(data['Dept']),
-        );
-    e = db['studentReg'].find_one({'student_email': email});
-    if e is not None:
-        if testToken == "":
+    testToken = str(data['testToken']);
+    if testToken == "":
+        email, queid, course = (
+                str(data['email']),
+                str(data['queid']),
+                str(data['Dept']),
+            );
+        e = db['studentReg'].find_one({'student_email': email});
+        if e is not None:
+            
             quesid = db['questionstiming'].find_one({"QuestionId": queid})
             Questions = list(db['questions'].find({}, {"Id": 0}))
             for que in Questions:
@@ -669,7 +671,6 @@ def GenerateNQ():
             if quesid is not None:
                 Token = GeneratedToken(email);
                 userData = db['studentattended'].find_one({ "email":email, "QueId": queid });
-                #QuestionsAttented = db['studentattended'].find_one_and_update({"_id": ObjectId(id)})
                 if userData == None:
                     datas = {
                         "email": email,
@@ -680,10 +681,17 @@ def GenerateNQ():
                     }
                     res = db['studentattended'].insert_one(datas);
                 QueGen = RandomQue(Questions);
-                return jsonify({"message": "Lets Start the Test",  "startTest": Token, "Question": QueGen['Question'], "Distractors": QueGen['Distractors'], "Questionobjid": str(QueGen['_id'])}), 200;
+                questionStructure = {
+                    "Questionobjid": str(QueGen['_id']),
+                    "Question": QueGen['Question'],
+                    "Distractors": QueGen['Distractors'], 
+                }
+                return jsonify({"message": "Lets Start the Test",  "startTest": Token, "questionStructure": questionStructure }), 200;
             else:
                 return jsonify({"error": "Invalid Question Id"});
         else:
+            return jsonify({"error" : "Invalid email"})
+    else:
             duration,queobjid,answer = (
                 str(data['duration']),
                 str(data['queobjid']),
@@ -698,9 +706,12 @@ def GenerateNQ():
                     answer=answer.lower(), 
                     id=queobjid
                 );
-            return jsonify({"message":"Continue Exam", "Question": QueGen['Question'], "Distractors": QueGen['Distractors'], "Questionobjid": str(QueGen['_id'])})
-    else:
-        return jsonify({"error" : "Invalid email"})
+            questionStructure = {
+                "Questionobjid": str(QueGen['_id']),
+                "Question": QueGen['Question'],
+                "Distractors": QueGen['Distractors'], 
+            }
+            return jsonify({"message":"Continue Exam", "questionStructure": questionStructure})
 
 
 
