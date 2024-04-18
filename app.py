@@ -27,21 +27,23 @@ import torch
 from heapq import nlargest
 import random
 import numpy as np;
+from ChooseQue import RandomQue, ChooseCrtQues;
+
 
 import gensim.downloader as api
 
-# Explicitly load the cached model, if available
-model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+# # Explicitly load the cached model, if available
+# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-if model_path:
-    # Model is cached, load it
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model loaded from cache")
-else:
-    # Model is not cached, download it
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model downloaded")
-# Now you can use the glove_model for further processing
+# if model_path:
+#     # Model is cached, load it
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model loaded from cache")
+# else:
+#     # Model is not cached, download it
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model downloaded")
+# # Now you can use the glove_model for further processing
 
 
 
@@ -177,20 +179,7 @@ def student_login():
     if any([re.match(Email_Regex, email),re.match(Name_Regex,username)]):
         print(username, email, course, question_id)
         Token = GeneratedToken(username)  # Assuming this function is defined correctly
-        userData = db['users'].find_one({ "email":email, "QueId": question_id });
-        if userData == None:
-            datas = {
-                "name": username,
-                "email": email,
-                "course": course,
-                "QueId": question_id
-            }
-            res = db['users'].insert_one(datas);
-            if res.acknowledged:
-                datas["_id"] = str(datas['_id'])
-                return jsonify({"message": "success", "Token": f"{Token}", "userData": datas}), 200;
-        else:
-            return jsonify({"message": "Continue Exam"}), 200
+        
     else:
         return jsonify({"error": "Email Error"}), 422
 
@@ -671,7 +660,7 @@ def Start(text):
             else :
                 que_diff = "hard"
             from Format import Format
-            question_dict = Format(question, answer, que_diff,current_Answer_list, similarity, difficulty, QuestionId, FacId)
+            question_dict = Format(question, answer, que_diff, distractors, similarity, difficulty, QuestionId, FacId)
         Proper_QA.append(question_dict)
         count+=1
         i+=1;
@@ -683,30 +672,72 @@ def Start(text):
 
 
 
+
+easy = [];
+medium = []
+hard = []
+
 @app.route('/getquestion', methods=['POST'])
 def GenerateNQ():
     data = request.json;
-    email, queid, password = data['email'], data['queid'], data['pass'];
-    checkuser = db['studentReg'].find_one({"student_email": email});
-    if checkuser is not None:
-        if password == checkuser['student_pass']:
+    email, queid, course, testToken, duration,queObjid, answer = (
+            str(data['email']),
+            str(data['queid']),
+            str(data['Dept']),
+            str(data['testToken']),
+            str(data['duration']),
+            str(data['queobjid']),
+            str(data['answer'])
+        );
+    e = db['studentReg'].find_one({'student_email': email});
+    if e is not None:
+        if testToken == "":
             quesid = db['questionstiming'].find_one({"QuestionId": queid})
-            Questions = list(db['questions'].find({}))
-            print(Questions)
+            Questions = list(db['questions'].find({}, {"Id": 0}))
+            for que in Questions:
+                print(que['Que_Difficulty'])
+                if que['Que_Difficulty'] == "easy":
+                    easy.append(que);
+                elif que['Que_Difficulty'] == "medium":
+                    medium.append(que)
+                elif que['Que_Difficulty'] == "hard":
+                    hard.append(que);
+            
             if quesid is not None:
                 Token = GeneratedToken(email);
-                return jsonify({"message": "Lets Start the Test", "startTest": Token, "UserId": str(checkuser['_id']), "duration": quesid['Duration']}), 200;
+                userData = db['studentattended'].find_one({ "email":email, "QueId": queid });
+                #QuestionsAttented = db['studentattended'].find_one_and_update({"_id": ObjectId(id)})
+                if userData == None:
+                    datas = {
+                        "email": email,
+                        "course": course,
+                        "QueId": queid,
+                        "score": 0,
+                        "Questionsattented": 0
+                    }
+                    res = db['studentattended'].insert_one(datas);
+                QueGen = RandomQue(Questions);
+                return jsonify({"message": "Lets Start the Test",  "startTest": Token, "Question": QueGen['Question'], "Distractors": QueGen['Distractors'], "Questionobjid": str(QueGen['_id'])}), 200;
             else:
                 return jsonify({"error": "Invalid Question Id"});
         else:
-            return jsonify({"error": "Invalid User password"})
+            
+            QueGen = ChooseCrtQues(
+                    db=db,
+                    easy=easy,
+                    medium=medium,
+                    hard=hard,
+                    duration=duration,
+                    answer=answer.lower(), 
+                    id=queObjid
+                );
+            return jsonify({"message":"Continue Exam", "Question": QueGen['Question'], "Distractors": QueGen['Distractors'], "Questionobjid": str(QueGen['_id'])})
     else:
-        return jsonify({"error": "there is no user"})
+        return jsonify({"error" : "Invalid email"})
 
 
-@app.route('/getMcq', methods=['POST'])
-def getQue():
-    return ""
+
+
 
 
 
