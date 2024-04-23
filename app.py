@@ -190,8 +190,19 @@ def student_login():
 @app.route('/LoginToDash', methods=['POST'])
 def LoginToDash():
     data = request.json;
-    print(data);
-    return jsonify({ "message": "success" })
+    email, password = data['email'], data['pass']
+    print(email, password)
+    if not re.match(Email_Regex, email):
+        return jsonify({"error": "Invalid Email"});
+    userData = db['studentReg'].find_one({"student_email": email});
+    print(userData);
+    if userData is not None:
+        if password == userData['student_pass']:
+            return jsonify({"message": "Successfully login", "userId": str(userData['_id'])});
+        else:
+            return jsonify({"error": "Invalid Password"});
+    else:
+        return jsonify({"error": "Wrong Email"});
 
 
 
@@ -264,9 +275,9 @@ def faculty_login():
     
     if re.match(Email_Regex, faculty_email):
         userdata = db['faculty'].find_one({"faculty_email": faculty_email})
-        faculty = userdata.get('_id');
-        print(faculty)
         if userdata is not None:
+            faculty = userdata.get('_id');
+            print(faculty)
             stored_pass = userdata.get('faculty_pass') 
             print(stored_pass)
             if stored_pass == faculty_pass:
@@ -313,8 +324,7 @@ def GetData(Type,id):
 @app.route('/studentReg', methods=['POST'])
 def studentReg():
     data = request.json;
-    stud_name, stud_pass, stud_repass, stud_course, stud_email = data['username'], data['password'], data['rePassword'], data['Course'], data['email'];
-    #print(stud_name, stud_email , stud_pass, stud_repass, stud_course)
+    stud_name, stud_pass, stud_repass, stud_course, stud_email = data['username'], data['password'], data['rePassword'], data['Dept'], data['email'];
     
     if any([stud_course == "", stud_email == "", stud_name == "", stud_pass == "", stud_repass == ""]):
         return jsonify({"error": "Please Fill all the Fields"})
@@ -696,7 +706,7 @@ def GenerateNQ():
                 str(data['duration']),
                 str(data['queobjid']),
                 str(data['answer']) 
-            )
+            )  
             QueGen = ChooseCrtQues(
                     db=db,
                     easy=easy,
