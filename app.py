@@ -702,7 +702,7 @@ def GenerateNQ():
         else:
             return jsonify({"error" : "Invalid email"})
     else:
-            duration,queobjid,answer = (
+            duration,queobjid,answer = ( 
                 str(data['duration']),
                 str(data['queobjid']),
                 str(data['answer']) 
