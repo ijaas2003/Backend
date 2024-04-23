@@ -30,20 +30,17 @@ import numpy as np;
 from ChooseQue import RandomQue, ChooseCrtQues;
 
 
-# import gensim.downloader as api
+import gensim.downloader as api
 
-# # # Explicitly load the cached model, if available
-# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-# if model_path:
-# #     # Model is cached, load it
-#     glove_model = api.load("glove-wiki-gigaword-300")
-#     print("Model loaded from cache")
-# else:
-# #     # Model is not cached, download it
-#     glove_model = api.load("glove-wiki-gigaword-300")
-#     print("Model downloaded")
-# Now you can use the glove_model for further processing
+if model_path:
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model loaded from cache")
+else:
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model downloaded")
+
 
 
 
@@ -367,6 +364,7 @@ def upload_file():
     startingTime = request.form['startingTime']
     endingTime = request.form['endingTime']
     FacId = request.form['facultyId']
+    QueCount=request.form['que_count']
     duration = request.form['duration']
     input_format = '%Y-%m-%dT%H:%M'
     input_format1 = '%H:%M'
@@ -395,18 +393,24 @@ def upload_file():
     text = StartGenerate(uploaded_file.filename, "Data.txt");
     if text:
         def GenerateId(lens):
-            total = string.ascii_letters + string.digits;
+            total = string.ascii_uppercase + string.digits;
             Id = ''.join(random.choice(total) for _ in range(lens))
             return Id
         global QuestionId;
-        QuestionId = GenerateId(lens=10);
+        QuestionId = GenerateId(lens=8);
         process = Start(text=text);
         print(process)
+        que_count=len(process)
+        # print(len(process))
+        if int(QueCount) > que_count:
+            return jsonify({"error":"Que count Not match "});
+       
         data = {
             "QuestionId": QuestionId,
             "StartingTime": startingTime,
             "EndingTime": endingTime,
             "Duration": duration,
+            "quecount":QueCount,
             "FacultyId": FacId
         }
         res = db['questions'].insert_many(process)

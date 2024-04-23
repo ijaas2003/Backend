@@ -6,11 +6,12 @@ def RandomQue(Questions):
 
 def ChooseCrtQues(db, easy, medium, hard, duration, id, answer):
      ids = ObjectId(id)
+     print(ids)
      current_que = db['questions'].find_one({"_id": ids})
+     print(current_que)
      correct_ans = str(current_que['Answer'])
      currentDiffvalue = current_que['QuestionDiff']
      currentDiff = current_que['Que_Difficulty']
-     print(ids, currentDiffvalue)
      if correct_ans.lower() == answer:
           if currentDiff == "easy":
                getQues = random.choice(medium)
