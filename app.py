@@ -1338,7 +1338,11 @@ def GenerateNQ():
             if quesid is not None:
                 Token = GeneratedToken(email)
                 userData = db['studentattended'].find_one({"email": email, "QueId": queid})
-                print(userData)# this data I will need 
+                checkQue = db['questionstiming'].find_one({"QuestionId":userData['QueId']}, {"quecount":1})
+                print(int(userData['Questionsattented']) == int(checkQue['quecount']));
+                if int(userData['Questionsattented']) == int(checkQue['quecount']):
+                    return jsonify({"error": "Already Attented the Test"});
+                #print(userData)# this data I will need 
                 Userdata = userData;
                 if userData is None:
                     datas = {
