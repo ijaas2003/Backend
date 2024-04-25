@@ -30,16 +30,16 @@ import numpy as np;
 from ChooseQue import RandomQue, ChooseCrtQues;
 
 
-import gensim.downloader as api
+# import gensim.downloader as api
 
-model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-if model_path:
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model loaded from cache")
-else:
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model downloaded")
+# if model_path:
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model loaded from cache")
+# else:
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model downloaded")
 
 
 
@@ -703,11 +703,15 @@ def GenerateNQ():
                         "email": email,
                         "course": course,
                         "QueId": queid,
+                        "Easy": 0,
+                        "Medium": 0,
+                        "Hard": 0,
                         "score": 0,
+                        "percent": 0,
                         "Questionsattented": 0
                     }
                     res = db['studentattended'].insert_one(datas)
-                    print(res[1]);
+                    # print(res[1]);
                 checkQue = db['questionstiming'].find_one({"QuestionId":userData['QueId']}, {"quecount":1})
                 print(int(userData['Questionsattented']) == int(checkQue['quecount']));
                 if int(userData['Questionsattented']) == int(checkQue['quecount']):
@@ -740,22 +744,28 @@ def GenerateNQ():
                     {"Questionsattented": 1}
                 },return_document=True
             )
-        #print(checkQue['quecount'], UpdateduserData['Questionsattented']);
-        if int(checkQue['quecount']) == (UpdateduserData['Questionsattented']):
-            return jsonify({"message": "Completed"});
         QueGen = ChooseCrtQues(
+                user=UpdateduserData,
                 db=db,
                 easy=easy,
                 medium=medium,
                 hard=hard,
                 duration=duration,
                 answer=answer.lower(), 
-                id=queobjid
+                id=queobjid,
+                score=UpdateduserData['score']
             )
+        if int(checkQue['quecount']) == (UpdateduserData['Questionsattented']):
+            users = db['studentattended'].find_one({"_id": Userdata["_id"]})
+            easyattent, mediumattent, hardattent = users['Easy'] * 4, users['Medium'] * 7, users['Hard'] * 10
+            per = f"{(users['score'] / (easyattent + mediumattent + hardattent)) * 100 :.2f}"
+            print(per)
+            up = db['studentattended'].find_one_and_update({"_id": Userdata['_id']}, {"$set": {"percent": per}}, return_document=True)
+            return jsonify({"message": "Completed"});
         questionStructure = {
             "Questionobjid": str(QueGen['_id']),
             "Question": QueGen['Question'],
-            "Distractors": QueGen['Distractors'], 
+            "Distractors": QueGen['Distractors'],
         }
         return jsonify({"questionStructure": questionStructure})
 
