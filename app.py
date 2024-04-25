@@ -653,9 +653,15 @@ def GetData(Type,id):
     else:
         ids = ObjectId(id)
         Userinfo=db['studentReg'].find_one({"_id":ids},{"_id":0});
+        Attended = list(db['studentattended'].find({ "email": Userinfo['student_email'] }, { "_id": 0}))
+        
         print(Userinfo)
         if Userinfo is not None:
-            return jsonify({"message":"Retrieved Successful","Userinfo":Userinfo});
+            return jsonify({
+                "message": "Retrieved Successful",
+                "Userinfo": Userinfo,
+                "Attended": Attended if Attended else "No Data"
+            })
         else:
             return jsonify({"error": "Not Available "})
 
