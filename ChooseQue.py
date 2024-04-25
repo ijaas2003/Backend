@@ -1,7 +1,7 @@
 import random
 from bson.objectid import ObjectId
-def RandomQue(Questions):
-     return random.choice(Questions);
+def RandomQue(medium):
+     return random.choice(medium);
 
 
 def ChooseCrtQues(db, easy, medium, hard, duration, id, answer):
