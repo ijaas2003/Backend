@@ -681,13 +681,17 @@ def GenerateNQ():
     data = request.json
     testToken = str(data['testToken'])
     if testToken == "":
-        email, queid, course = (
+        email,password,  queid, course = (
             str(data['email']),
+            str(data['pass']),
             str(data['queid']),
             str(data['Dept'])
         )
         e = db['studentReg'].find_one({'student_email': email})
         if e is not None:
+            print(password ,e['student_pass'])
+            if password != e['student_pass']:
+                return jsonify({"error": "Password incorrect"})
             quesid = db['questionstiming'].find_one({"QuestionId": queid})
             Questions = list(db['questions'].find({}, {"Id": 0}))
             for que in Questions:
