@@ -30,16 +30,16 @@ import numpy as np;
 from ChooseQue import RandomQue, ChooseCrtQues;
 
 
-import gensim.downloader as api
+# import gensim.downloader as api
 
-model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-if model_path:
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model loaded from cache")
-else:
-    glove_model = api.load("glove-wiki-gigaword-300")
-    print("Model downloaded")
+# if model_path:
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model loaded from cache")
+# else:
+#     glove_model = api.load("glove-wiki-gigaword-300")
+#     print("Model downloaded")
 
 
 
@@ -681,15 +681,19 @@ def GenerateNQ():
     data = request.json
     testToken = str(data['testToken'])
     if testToken == "":
-        email,password,  queid, course = (
+        email,password, Id,  queid, course = (
             str(data['email']),
             str(data['pass']),
+            str(data['Id']),
             str(data['queid']),
             str(data['Dept'])
         )
         e = db['studentReg'].find_one({'student_email': email})
+        realUser = db['studentReg'].find_one({"_id": ObjectId(Id)});
         if e is not None:
-            print(password ,e['student_pass'])
+            if str(e['student_email']) != str(realUser['student_email']):
+                return jsonify({"error": "It not exact user Email"});
+            # print(password ,e['student_pass'])
             if password != e['student_pass']:
                 return jsonify({"error": "Password incorrect"})
             quesid = db['questionstiming'].find_one({"QuestionId": queid})
