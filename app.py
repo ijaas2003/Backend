@@ -30,16 +30,16 @@ import numpy as np;
 from ChooseQue import RandomQue, ChooseCrtQues;
 
 
-# import gensim.downloader as api
+import gensim.downloader as api
 
-# model_path = api.load("glove-wiki-gigaword-300", return_path=True)
+model_path = api.load("glove-wiki-gigaword-300", return_path=True)
 
-# if model_path:
-#     glove_model = api.load("glove-wiki-gigaword-300")
-#     print("Model loaded from cache")
-# else:
-#     glove_model = api.load("glove-wiki-gigaword-300")
-#     print("Model downloaded")
+if model_path:
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model loaded from cache")
+else:
+    glove_model = api.load("glove-wiki-gigaword-300")
+    print("Model downloaded")
 
 
 
